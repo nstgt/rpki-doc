@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/about/introduction.rst:6
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../source/about/introduction.rst:8
 msgid ""
@@ -28,7 +28,9 @@ msgid ""
 "as well as some of the tools that are being developed for it. Any "
 "software implementer is welcome to add documentation for their tools to "
 "this project."
-msgstr ""
+msgstr "Resource Public Key Infrastructure（RPKI）のドキュメントへようこそ。"
+"ここではRPKI技術とRPKIのために開発されているいくつかのツールの概要を提供することを目的としています。"
+"ソフトウェア開発者であれば誰でも自分のツールのドキュメントをこのプロジェクトに追加することができます。"
 
 #: ../../source/about/introduction.rst:13
 msgid ""
@@ -36,11 +38,14 @@ msgid ""
 "Internet routing using the Border Gateway Protocol (BGP) more secure. "
 "This way, you will learn how RPKI can benefit your organisation, as well "
 "as helping others to be more secure on the Internet."
-msgstr ""
+msgstr "このページでは、RPKIの概要とRPKIがBorder Gateway Protocol（BGP）を"
+"使用したインターネットルーティングの安全性向上にどのように役立つかを説明します。"
+"このドキュメントを通して、RPKIが自身の組織のみならず他者の組織のインターネット上での"
+"安全性向上にどのような利点をもたらすかを知ることができます。"
 
 #: ../../source/about/introduction.rst:19
 msgid "About this Documentation"
-msgstr ""
+msgstr "このドキュメントについて"
 
 #: ../../source/about/introduction.rst:21
 msgid ""
@@ -53,14 +58,22 @@ msgid ""
 "markup language and then compiled into a static website/offline document "
 "using the open source `Sphinx <http://www.sphinx-doc.org>`_  and "
 "`ReadTheDocs <https://readthedocs.org/>`_ tools."
-msgstr ""
+msgstr "このドキュメントはNLnet LabsのRPKIチームによって継続的に執筆、修正、編集されています。"
+"最初のバージョンはAlex Band、Tim Bruijnzeels、Martin Hoffmannによって書かれました。"
+"時間の経過とともに世界中のネットワーク事業者コミュニティや研究者、関係者が情報を追加してきました。"
+"ドキュメントは `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_ "
+"マークアップ言語のテキストファイルで編集され、オープンソースの"
+" `Sphinx <http://www.sphinx-doc.org>`_ と"
+" `ReadTheDocs <https://readthedocs.org/>`_ を使用して静的なウェブサイト/"
+"オフラインドキュメントとしてコンパイルされています。"
 
 #: ../../source/about/introduction.rst:31
 msgid ""
 "You can contribute to the RPKI documentation by opening an issue or "
 "sending patches via pull requests on the `GitHub source repository "
 "<https://github.com/NLnetLabs/rpki-doc>`_."
-msgstr ""
+msgstr "`GitHub source repository <https://github.com/NLnetLabs/rpki-doc>`_ "
+"でのIssueの作成やプルリクエストを通したパッチの提供を通して本ドキュメントに貢献することが可能です。"
 
 #: ../../source/about/introduction.rst:35
 msgid ""
@@ -68,11 +81,12 @@ msgid ""
 "3.0 (`CC-BY 3.0 <https://creativecommons.org/licenses/by/3.0/>`_) "
 "license, with attribution to \"The RPKI team at NLnet Labs and the RPKI "
 "community\"."
-msgstr ""
+msgstr "すべてのコンテンツはクリエイティブ・コモンズ 表示 3.0（CC-BY 3.0）"
+"ライセンスの下にあり、"The RPKI team at NLnet Labs and RPKI community"に帰属します。"
 
 #: ../../source/about/introduction.rst:40
 msgid "About Resource Public Key Infrastructure"
-msgstr ""
+msgstr "RPKIについて"
 
 #: ../../source/about/introduction.rst:42
 msgid ""
@@ -81,7 +95,9 @@ msgid ""
 " it uses a public key infrastructure that creates a chain of resource "
 "certificates that follows the same structure as the way IP addresses and "
 "AS numbers are handed down."
-msgstr ""
+msgstr "RPKIは、インターネット番号リソースの所有者が、そのリソースをどのように使用するか"
+"について検証可能な申し立てを行うことを可能にします。これを実現するために、IPアドレスや"
+"AS番号の分配方法と同じ構造を持つリソース証明書のチェーンを作成する公開鍵基盤を使用します。"
 
 #: ../../source/about/introduction.rst:47
 msgid ""
@@ -94,7 +110,14 @@ msgid ""
 "<https://www.lacnic.net/640/2/lacnic/general-information-resource-"
 "certification-system-rpki>`_ and `RIPE NCC <https://www.ripe.net/manage-"
 "ips-and-asns/resource-management/certification/>`_."
-msgstr ""
+msgstr "RPKIはインターネットのルーティングをより安全にするために使用されます。"
+"これはオープンソースのソフトウェア開発者、ルーターベンダー、5つの地域インターネットレジストリ"
+"（`ARIN <https://www.arin.net/resources/rpki/>`_、"
+"`APNIC <https://www.apnic.net/community/security/resource-certification/>`_、"
+"`AFRINIC <https://www.afrinic.net/resource-certification>`_、"
+"`LACNIC <https://www.lacnic.net/640/2/lacnic/general-information-resource-"
+"certification-system-rpki>`_、`RIPE NCC <https://www.ripe.net/manage-"
+"ips-and-asns/resource-management/certification/>`_）が参加するコミュニティ主導のシステムです。"
 
 #: ../../source/about/introduction.rst:57
 msgid ""
@@ -104,22 +127,27 @@ msgid ""
 "download and validate these statements and make routing decisions based "
 "on them. This process is referred to as route origin validation (ROV). "
 "This provides a stepping stone to provide path validation in the future."
-msgstr ""
+msgstr "現在RPKIは、IPアドレスブロックの正当な所有者が、どのASが自分のプレフィックスを"
+"BGPで広報することを許可されているかについての正式な申し立てを作成するために使用されています。"
+"これにより、他のネットワークオペレータはこれらの申し立てをダウンロードして検証し、それに"
+"基づいてルーティングを行うことができます。このプロセスはRoute Origin Validation（ROV）"
+"と呼ばれています。これは、将来的にPath Validationを提供するための足がかりとなります。"
 
 #: ../../source/about/introduction.rst:65
 msgid "Organisation of this Documentation"
-msgstr ""
+msgstr "ドキュメントの構成"
 
 #: ../../source/about/introduction.rst:67
 msgid "This documentation is organised into three main sections:"
-msgstr ""
+msgstr "このドキュメントは主に3つのセクションで構成されています。"
 
 #: ../../source/about/introduction.rst:69
 msgid ""
 "The :ref:`sec-general` section contains this introduction as well as "
 "information about the licensing, authors, etc. It also contains the "
 ":ref:`doc_faq` and the :ref:`doc_quick_help`."
-msgstr ""
+msgstr ":ref:`sec-general` のセクションではライセンスや著者などの情報を含む「はじめに」の他に、"
+":ref:`doc_faq` と :ref:`doc_quick_help` についても記載します。"
 
 #: ../../source/about/introduction.rst:72
 msgid ""
@@ -127,11 +155,14 @@ msgid ""
 "standards in order for you to get a good sense of the requirements and "
 "moving parts. It will help you choose the right RPKI solution for your "
 "organisation, with regards to generating, publishing and using RPKI data."
-msgstr ""
+msgstr ":ref:`sec-rpki-tech` のセクションでは、RPKIの要件と動作の仕組みをよく理解できるように"
+"RPKI技術と規格について説明します。これによりRPKIのデータの生成、公開、および使用に関して"
+"自身の組織に適したソリューションを選択することができるようになります。"
 
 #: ../../source/about/introduction.rst:76
 msgid ""
 "The :ref:`sec-rpki-tools` section is about various open source projects "
 "that are maintained to support RPKI."
-msgstr ""
+msgstr ":ref:`sec-rpki-tools` のセクションではRPKIをサポートするためにメンテナンスされている"
+"さまざまなオープンソースプロジェクトについて説明しています。"
 
