@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2020, NLnet Labs (CC-BY 3.0)
+# This file is distributed under the same license as the RPKI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPKI \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 14:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/krill/remote-publishing.rst:4
+msgid "Remote Publishing"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:6
+msgid ""
+"By default Krill CAs use an embedded repository server for the "
+"publication of RPKI objects. However, you may want to allow delegated CAs"
+" (e.g. your customers, or other business units) to publish at a "
+"repository server that you manage. In addition, running the repository "
+"separately from the CA offers flexibility in changing publication "
+"strategy and redundancy."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:12
+msgid ""
+"The repository functions for Krill can be accessed through the "
+":command:`publishers` subcommand in the CLI:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:38
+msgid "List Publishers"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:40
+msgid ""
+"You can list all publishers in Krill using the command below. Note that "
+"the list of publishers will include any embedded Krill CAs as well as any"
+" possible remote (:rfc:`8181` compliant) publishers."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:49
+msgid "API Call: :krill_api:`GET /v1/publishers <list_publishers>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:52
+msgid "Show Publisher Details"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:54
+msgid ""
+"You can show the full details of a publisher, including the files that "
+"they published."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:63
+msgid "API Call: :krill_api:`GET /v1/publishers/ta <get_publisher>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:65
+msgid ""
+"The default text output just shows the handle of the publisher, the hash "
+"of its identity certificate key, and the rsync URI jail under which the "
+"publisher is allowed to publish objects."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:69
+msgid ""
+"The JSON response includes a lot more information, including the files "
+"which were published and the full ID certificate used by the publisher. "
+"Note that even embedded Krill CAs will have such a certificate, even if "
+"they access the repository server locally."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:75
+msgid "Remove a Publisher"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:77
+msgid ""
+"You can remove publishers. If you do, then all of its content will be "
+"removed as well and the publisher will no longer be allowed to publish."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:80
+msgid ""
+"Note that you can do this without the publisher's knowledge, nor consent,"
+" even for embedded Krill CAs. With great power comes great "
+"responsibility. That said, you can always add a publisher again (also "
+"embedded publishers), and once a publisher can connect to your repository"
+" again, it should be able to figure out that it needs to re-publish all "
+"its content (Krill CAs will always check for this)."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:91
+msgid "API Call: :krill_api:`DELETE /v1/publishers/ca <delete_publisher>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:95
+msgid "Add a Publisher"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:97
+msgid ""
+"In order to add a publisher you have to get its :rfc:`8183` Publisher "
+"Request XML, and hand it over to the server:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:104
+msgid "API Call: :krill_api:`POST /v1/publishers <add_publisher>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:108
+msgid "Show Repository Response"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:110
+msgid ""
+"In order to show the :rfc:`8183` Repository Response XML for a specific "
+"publisher use the following:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:120
+msgid ""
+"API Call: :krill_api:`GET /v1/publishers/ca/response.json "
+"<get_publisher_repository_response>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:123
+msgid "Publish at a Remote Repository"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:125
+msgid ""
+"Controlling your CA's repository server is done through the "
+":command:`repo` subcommand of the CLI:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:149
+msgid "Show repository for CA"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:151
+msgid ""
+"You can use the following to show which repository server your CA is "
+"using, as well as what is has published at the location. Krill will issue"
+" an actual ``list`` query to the repository and give back the response, "
+"or an error in case of issues."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:170
+msgid "API Call: :krill_api:`GET /v1/cas/ca/repo <get_ca_repository>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:174
+msgid "Show Publisher Request"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:176
+msgid ""
+"You can use the following to show the :rfc:`8183` Publisher Request XML "
+"for a CA. You will need to hand this over to your remote repository so "
+"that they can add your CA."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:187
+msgid ""
+"API Call: :krill_api:`GET /v1/cas/ca/repo/request.json "
+"<get_ca_publisher_request>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:191
+msgid "Change Repository for a CA"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:193
+msgid ""
+"You can change which repository server is used by your CA. If you have "
+"multiple CAs you will have to repeat this for each of them. Also, note "
+"that by default your CAs will assume that they use the embedded "
+"publication server. So, in order to use a remote server you will have to "
+"use this process to change over."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:198
+msgid ""
+"Changing repositories is actually more complicated than one might think, "
+"but fortunately it's all automated. When you ask Krill to change, the "
+"following steps will be executed:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:202
+msgid "check that the new repository can be reached, and this ca is authorised"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:203
+msgid "regenerate all objects using the URI jail given by the new repository"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:204
+msgid "publish all objects in the new repository"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:205
+msgid "request new certificates from (all) parent CA(s) including the new URI"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:206
+msgid "once received, do a best effort to clean up the old repository"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:208
+msgid ""
+"In short, Krill performs a sanity check that the new repository can be "
+"used, and then tries to migrate there in a way that will not lead to "
+"invalidating any currently signed objects."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:212
+msgid "To start a migration you can use the following."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:218
+msgid "API Call: :krill_api:`POST /v1/cas/ca/repo <update_ca_repository>`"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:220
+msgid "If no file is specified the CLI will try to read the XML from STDIN."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:222
+msgid ""
+"Note that if you were using an embedded repository, and you instruct your"
+" CA to connect to the embedded repository, but set up as a *remote*, then"
+" you will find that you have no more published objects - because.. Krill "
+"tries to clean up the old repository, and we assume that you would not "
+"try to use an embedded server over the :rfc:`8181` protocol."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:228
+msgid "But, suppose that you did, you would now see this:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:242
+msgid "But no worries.. this can be fixed."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:244
+msgid ""
+"First, you may want to migrate back to using the embedded repository "
+"without the :rfc:`8181` protocol overhead:"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:251
+msgid ""
+"But this does not solve your problem just yet. Or well, it will re-"
+"publish everything under the new embedded repository, but then it will "
+"clean up the 'old' repository which happens to be the same one in this "
+"corner case."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:255
+msgid "The solution is 're-syncing' as described in the following section."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:259
+msgid "Re-syncing CAs with Repository"
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:261
+msgid ""
+"If your CAs have somehow become out of sync with their repository, then "
+"they will automatically re-sync whenever there is an update like a "
+"renewal of manifest and crl (every 8 hours), or whenever ROAs are "
+"changed. However, you can force that *all* Krill CAs re-sync using the "
+"following."
+msgstr ""
+
+#: ../../source/krill/remote-publishing.rst:270
+msgid "API Call: :krill_api:`POST /v1/bulk/cas/sync/repo <resync_all_cas>`"
+msgstr ""
+

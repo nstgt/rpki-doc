@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2020, NLnet Labs (CC-BY 3.0)
+# This file is distributed under the same license as the RPKI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPKI \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 14:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/krill/testing.rst:4
+msgid "Running a Test Environment"
+msgstr ""
+
+#: ../../source/krill/testing.rst:6
+msgid ""
+"If you want to get operational experience with Krill before before "
+"configuring a production parent, you can run with an embedded TA which "
+"you can give any address space you want. You can generate your own Trust "
+"Anchor for it, which can be added to your Relying Party software in order"
+" to validate the objects you have published locally."
+msgstr ""
+
+#: ../../source/krill/testing.rst:14
+msgid "Setting up the Configuration"
+msgstr ""
+
+#: ../../source/krill/testing.rst:16
+msgid ""
+"For testing we will assume that you will run your own Krill repository "
+"inside a single Krill instance, using 'localhost' in the repository URIs."
+" You have to set the following environment variable to re-assure Krill "
+"that you are running a test environment, or it will refuse the use of "
+"'localhost':"
+msgstr ""
+
+#: ../../source/krill/testing.rst:25
+msgid ""
+"For convenience you may wish to set the following variables, so that you "
+"don't have to repeat command line arguments for these:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:34
+msgid ""
+"Replace *\"correct-horse-battery-staple\"* with a token of your own "
+"choosing! If you don't the UI will kindly remind you that \"You should "
+"not get your passwords from https://xkcd.com/936/\"."
+msgstr ""
+
+#: ../../source/krill/testing.rst:38
+msgid ""
+"You can now generate a krill configuration file using the following "
+"command:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:49
+msgid "Use an embedded TA"
+msgstr ""
+
+#: ../../source/krill/testing.rst:51
+msgid ""
+"To run Krill in test mode you can set \"use_ta\" to \"true\" in your "
+":file:`krill.conf`, or use an environment variable:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:59
+msgid "Add a CA"
+msgstr ""
+
+#: ../../source/krill/testing.rst:61
+msgid ""
+"When adding a CA you need to choose a handle, essentially just a name. "
+"The term \"handle\" comes from :RFC:`8183` and is used in the "
+"communication protocol between parent and child CAs, as well as CAs and "
+"publication servers. For the handle you can use alphanumerical "
+"characters, dashes or underscores."
+msgstr ""
+
+#: ../../source/krill/testing.rst:66
+msgid ""
+"The handle you select is not published in the RPKI but used as "
+"identification to parent and child CAs you interact with. You should "
+"choose a handle that helps others recognise your organisation. Once set, "
+"the handle cannot be be changed as it would interfere with the "
+"communication between parent and child CAs, as well as the publication "
+"repository."
+msgstr ""
+
+#: ../../source/krill/testing.rst:76
+msgid "API Call: :krill_api:`POST /v1/cas <add_ca>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:78
+msgid ""
+"When a CA has been added, it is registered to publish locally in the "
+"Krill instance where it exists, but other than that it has no "
+"configuration yet. In order to do anything useful with a CA you will "
+"first have to add at least one parent to it, followed by some Route "
+"Origin Authorisations and/or child CAs."
+msgstr ""
+
+#: ../../source/krill/testing.rst:84
+msgid "List CAs"
+msgstr ""
+
+#: ../../source/krill/testing.rst:86
+msgid ""
+"You can list all handles (names) for the existing CAs in Krill using the "
+"following command:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:95
+msgid "API Call: :krill_api:`GET /v1/cas <list_cas>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:99
+msgid "Let CA publish in the embedded Repository"
+msgstr ""
+
+#: ../../source/krill/testing.rst:102
+msgid "Step 1: Generate RFC8183 Publisher Request"
+msgstr ""
+
+#: ../../source/krill/testing.rst:104
+msgid ""
+"First you will need to get the :rfc:`8183` Publisher Request XML for your"
+" CA."
+msgstr ""
+
+#: ../../source/krill/testing.rst:112
+msgid "Step 2: Add your CA to the Repository"
+msgstr ""
+
+#: ../../source/krill/testing.rst:114
+msgid ""
+"You now need to authorise your CA in your repository and generate an "
+":rfc:`8183` Repository Response XML file:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:125
+msgid "Step 3: Configure your CA to use the Repository"
+msgstr ""
+
+#: ../../source/krill/testing.rst:127
+msgid "Now configure your CA using the response:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:134
+msgid "Show CA Details"
+msgstr ""
+
+#: ../../source/krill/testing.rst:136
+msgid ""
+"You can use the following to show the details of the embedded TA, if you "
+"enabled it:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:179
+msgid "API Call: :krill_api:`GET /v1/cas/ta <get_ca>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:182
+msgid "Add a Child to the Embedded TA"
+msgstr ""
+
+#: ../../source/krill/testing.rst:184
+msgid ""
+"If you are using an embedded TA for testing then you will first need to "
+"add your new CA \"ca\" to it. Krill supports two communication modes:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:187
+msgid "embedded, meaning the both the parent and child CA live in the same Krill"
+msgstr ""
+
+#: ../../source/krill/testing.rst:188
+msgid "rfc6492, meaning that the official RFC protocol is used"
+msgstr ""
+
+#: ../../source/krill/testing.rst:190
+msgid ""
+"Here we will document the second option. It's slightly less efficient, "
+"but it's the same as what you would need to delegate from your CA to "
+"remote CAs."
+msgstr ""
+
+#: ../../source/krill/testing.rst:194
+msgid "Step 1: RFC 8183 request XML"
+msgstr ""
+
+#: ../../source/krill/testing.rst:196
+msgid "First you will need to get the :rfc:`8183` request XML from your child."
+msgstr ""
+
+#: ../../source/krill/testing.rst:202
+msgid ""
+"API Call: :krill_api:`GET /v1/cas/ca/child_request.json "
+"<get_ca_child_request>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:205
+msgid "Step 2: Add child \"ca\" to \"ta\""
+msgstr ""
+
+#: ../../source/krill/testing.rst:210
+msgid "To add a child, you will need to:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:208
+msgid "Choose a unique local name (handle) that the parent will use for the child"
+msgstr ""
+
+#: ../../source/krill/testing.rst:209
+msgid "Choose initial resources (asn, ipv4, ipv6)"
+msgstr ""
+
+#: ../../source/krill/testing.rst:210
+msgid "Have an :rfc:`8183` request"
+msgstr ""
+
+#: ../../source/krill/testing.rst:212
+msgid ""
+"And in this case we also need to override the ENV variable and indicate "
+"that we want to add this child to the CA \"ta\". The following command "
+"will add the child, and the :rfc:`8183` XML from the \"ta\":"
+msgstr ""
+
+#: ../../source/krill/testing.rst:223
+msgid "API Call: See: :krill_api:`POST /v1/cas/ta/children <add_child_ca>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:225
+msgid ""
+"The default response is the :rfc:`8183` parent response XML file. Or, if "
+"you set ``--format json`` you will get the plain API response."
+msgstr ""
+
+#: ../../source/krill/testing.rst:228
+msgid "If you need the response again, you can ask the \"ta\" again:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:234
+msgid ""
+"API Call: :krill_api:`GET /v1/cas/ta/children/ca/contact "
+"<get_child_ca_parent_contact>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:237
+msgid "Step 3: Add parent \"ta\" to \"ca\""
+msgstr ""
+
+#: ../../source/krill/testing.rst:239
+msgid ""
+"You can now add \"ta\" as a parent to your CA \"ca\". You need to choose "
+"a locally unique handle that your CA will use to refer to this parent. "
+"Here we simply use the handle \"ta\" again, but in case you have multiple"
+" parents you may want to refer to them by names that make sense in your "
+"context."
+msgstr ""
+
+#: ../../source/krill/testing.rst:244
+msgid ""
+"Note that whichever handle you choose, your CA will use the handles that "
+"the parent response included for itself *and* for your CA in its "
+"communication with this parent. I.e. you may want to inspect the response"
+" and use the same handle for the parent (parent_handle attribute), and do"
+" not be surprised or alarmed if the parent refers to your ca "
+"(child_handle attribute) by some seemingly random name. Some parents do "
+"this to ensure unicity."
+msgstr ""
+
+#: ../../source/krill/testing.rst:255
+msgid "API Call: :krill_api:`POST /v1/cas/ca/parents <add_ca_parent>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:257
+msgid "Now you should see that your \"child\" is certified:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:299
+msgid "API Call: :krill_api:`GET /v1/cas/ca <get_ca>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:302
+msgid "ROAs"
+msgstr ""
+
+#: ../../source/krill/testing.rst:304
+msgid ""
+"Krill lets users create Route Origin Authorisations (ROAs), the signed "
+"objects that state which Autonomous System (AS) is authorised to "
+"originate one of your prefixes, along with the maximum prefix length it "
+"may have."
+msgstr ""
+
+#: ../../source/krill/testing.rst:308
+msgid ""
+"You can update ROAs through the command line by submitting a plain text "
+"file with the following format:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:320
+msgid "You can then add this to your CA:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:326
+msgid ""
+"API Call: :krill_api:`POST /v1/cas/ca/routes "
+"<update_route_authorizations>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:328
+msgid ""
+"If you followed the steps above then you would get an error, because "
+"there is no authorisation for 10.0.3.0/24 => 64496. If you remove the "
+"line and submit again, then you should see no response, and no error."
+msgstr ""
+
+#: ../../source/krill/testing.rst:332
+msgid "You can list Route Origin Authorisations as well:"
+msgstr ""
+
+#: ../../source/krill/testing.rst:340
+msgid "API Call: :krill_api:`GET /v1/cas/ca/routes <list_route_authorizations>`"
+msgstr ""
+
+#: ../../source/krill/testing.rst:344
+msgid "History"
+msgstr ""
+
+#: ../../source/krill/testing.rst:346
+msgid "You can show the history of all the things that happened to your CA:"
+msgstr ""
+

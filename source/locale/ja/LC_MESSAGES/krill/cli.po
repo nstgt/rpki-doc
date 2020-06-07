@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2020, NLnet Labs (CC-BY 3.0)
+# This file is distributed under the same license as the RPKI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPKI \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 14:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/krill/cli.rst:4
+msgid "Using the CLI"
+msgstr ""
+
+#: ../../source/krill/cli.rst:6
+msgid ""
+"Every function of Krill can be controlled from the command line interface"
+" (CLI). The Krill CLI is a wrapper around the :ref:`Krill "
+"API<doc_krill_using_api>` which is based on JSON over HTTPS."
+msgstr ""
+
+#: ../../source/krill/cli.rst:10
+msgid ""
+"It's convenient to set up the following environment variables so that you"
+" can easily use the Krill CLI on the same machine where Krill is running:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:19
+msgid ""
+"For your CA name, you can use alphanumeric characters, dashes and "
+"underscores, i.e. ``a-zA-Z0-9_``."
+msgstr ""
+
+#: ../../source/krill/cli.rst:22
+msgid ""
+"Note that you can use the CLI from another machine, but then you will "
+"need to set up a proxy server in front of Krill and make sure that it has"
+" a real TLS certificate."
+msgstr ""
+
+#: ../../source/krill/cli.rst:26
+msgid ""
+"To use the CLI you need to invoke :command:`krillc` followed by one or "
+"more subcommands, and some arguments. Help is built-in:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:33
+msgid "The following arguments are expected by most subcommands:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:43
+msgid ""
+"You can set default values for these arguments in environment variables, "
+"to make it a bit easier to use the CLI:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:47
+msgid "Variable"
+msgstr ""
+
+#: ../../source/krill/cli.rst:47
+msgid "Argument"
+msgstr ""
+
+#: ../../source/krill/cli.rst:49
+msgid "KRILL_CLI_SERVER"
+msgstr ""
+
+#: ../../source/krill/cli.rst:49
+msgid "-s, --server"
+msgstr ""
+
+#: ../../source/krill/cli.rst:51
+msgid "KRILL_CLI_TOKEN"
+msgstr ""
+
+#: ../../source/krill/cli.rst:51
+msgid "-t, --token"
+msgstr ""
+
+#: ../../source/krill/cli.rst:53
+msgid "KRILL_CLI_FORMAT"
+msgstr ""
+
+#: ../../source/krill/cli.rst:53
+msgid "-f, --format (defaults to text)"
+msgstr ""
+
+#: ../../source/krill/cli.rst:55
+msgid "KRILL_CLI_MY_CA"
+msgstr ""
+
+#: ../../source/krill/cli.rst:55
+msgid "-c, --ca"
+msgstr ""
+
+#: ../../source/krill/cli.rst:58
+msgid "For example:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:65
+msgid ""
+"If you do use the command line argument equivalents, you will override "
+"whatever value you set in the ENV. Krill will give you a friendly error "
+"message if you did not set the applicable ENV variable, and don't include"
+" the command line argument equivalent."
+msgstr ""
+
+#: ../../source/krill/cli.rst:71
+msgid "Setting up Your Certificate Authority"
+msgstr ""
+
+#: ../../source/krill/cli.rst:73
+msgid ""
+"After Krill is running and configured, you can set up the Certificate "
+"Authority. This involves the following steps:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:76
+msgid "Create your CA"
+msgstr ""
+
+#: ../../source/krill/cli.rst:77
+msgid "Retrieve your CA's 'child request'"
+msgstr ""
+
+#: ../../source/krill/cli.rst:78
+msgid "Retrieve your CA's 'publisher request'"
+msgstr ""
+
+#: ../../source/krill/cli.rst:79
+msgid "Upload the 'publisher request' to your publisher"
+msgstr ""
+
+#: ../../source/krill/cli.rst:80
+msgid "Save the 'repository response'"
+msgstr ""
+
+#: ../../source/krill/cli.rst:81
+msgid "Update the repository for your CA using the 'repository response'"
+msgstr ""
+
+#: ../../source/krill/cli.rst:82
+msgid "Upload the 'child request' to your parent"
+msgstr ""
+
+#: ../../source/krill/cli.rst:83
+msgid "Save the 'parent response'"
+msgstr ""
+
+#: ../../source/krill/cli.rst:84
+msgid "Add the parent using the 'parent response'"
+msgstr ""
+
+#: ../../source/krill/cli.rst:97
+msgid ""
+"Next, upload the publisher request XML file to your publication server "
+"provider and save the repository response XML file."
+msgstr ""
+
+#: ../../source/krill/cli.rst:105
+msgid ""
+"Next, upload the child request XML file to your parent CA (e.g. via their"
+" portal) and save the parent response XML file."
+msgstr ""
+
+#: ../../source/krill/cli.rst:113
+msgid ""
+"Note that you can use any local name for ``--parent``. This is the name "
+"that Krill will show to you. Similarly, Krill will use your local CA name"
+" which you set in the ```KRILL_CLI_MY_CA`` ENV variable. However, the "
+"parent response includes the names (or handles as they are called in the "
+"RFC) by which it refers to itself, and your CA. Krill will make sure that"
+" it uses these names in the communication with the parent. There is no "
+"need for these names to be the same."
+msgstr ""
+
+#: ../../source/krill/cli.rst:121
+msgid "Managing Route Origin Authorisations"
+msgstr ""
+
+#: ../../source/krill/cli.rst:123
+msgid ""
+"Krill lets users create Route Origin Authorisations (ROAs), the signed "
+"objects that state which Autonomous System (AS) is authorised to "
+"originate one of your prefixes, along with the maximum prefix length it "
+"may have."
+msgstr ""
+
+#: ../../source/krill/cli.rst:127
+msgid ""
+"You can update ROAs through the command line by submitting a plain text "
+"file with the following format:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:139
+msgid "You can then add this to your CA:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:145
+msgid ""
+"If you followed the steps above then you would get an error, because "
+"there is no authorisation for 198.51.100.0/24 => 64496. If you remove the"
+" line and submit again, then you should see no response, and no error."
+msgstr ""
+
+#: ../../source/krill/cli.rst:149
+msgid "You can list ROAs in the following way:"
+msgstr ""
+
+#: ../../source/krill/cli.rst:158
+msgid "Displaying History"
+msgstr ""
+
+#: ../../source/krill/cli.rst:160
+msgid ""
+"You can show the history of all the things that happened to your CA using"
+" the :command:`history` command."
+msgstr ""
+

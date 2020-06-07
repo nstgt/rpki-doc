@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2020, NLnet Labs (CC-BY 3.0)
+# This file is distributed under the same license as the RPKI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPKI \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 14:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/krill/registering-with-a-parent.rst:4
+msgid "Registering with a Parent"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:6
+msgid ""
+"As mentioned in :ref:`doc_krill_parent_interactions` in order to join the"
+" RPKI you will need to register your CA with a parent in the hierarchy. "
+"Typically that will be an RIR or NIR, but as mentioned in the "
+":ref:`introduction<doc_krill>` it could also be a parent within your "
+"business."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:11
+msgid ""
+"To register with an RPKI parent you need to exchange :rfc:`8183` XML "
+"files with the parent via their :ref:`web portal<member_portals>` or API."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:37
+msgid "Scenarios"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:40
+msgid "Krill CA -> NIR/RIR Remote CA"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:42
+msgid ""
+"Registering a Krill CA as a child with a remote Krill CA may require that"
+" you log in to and interact with the a parent web portal, e.g.:"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:45
+msgid "In the Krill UI copy/download the :rfc:`8183` Child Request."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:47
+msgid "In the NIR/RIR portal:"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:49
+msgid "Paste/upload the :rfc:`8183` Child Request."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:51
+msgid "Copy/download the :rfc:`8183` Parent Response."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:53
+msgid "In the Krill UI paste/upload the :rfc:`8183` Parent Response."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:57
+msgid "Krill CA -> Krill Remote CA"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:59
+msgid ""
+"Registering a Krill CA as a child of a remote Krill CA can be done with "
+"the following commands:"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:62
+msgid ""
+"To complete the registration you will need the API token for the remote "
+"Krill CA, or the support of an admin willing to run commands against the "
+"remote Krill CA for you."
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:80
+msgid "Krill CA -> Krill Local CA"
+msgstr ""
+
+#: ../../source/krill/registering-with-a-parent.rst:82
+msgid ""
+"Registering a Krill CA as a child of a local \"embedded\" Krill CA can be"
+" done with the following commands:"
+msgstr ""
+

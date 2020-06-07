@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2020, NLnet Labs (CC-BY 3.0)
+# This file is distributed under the same license as the RPKI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPKI \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 14:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/routinator/installation.rst:4
+msgid "Installation"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:6
+msgid ""
+"Getting started with Routinator is really easy either building from "
+"`Cargo <https://crates.io/crates/routinator>`_ or running with `Docker "
+"<https://hub.docker.com/r/nlnetlabs/routinator/>`_."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:11
+msgid "Quick Start"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:13
+msgid ""
+"Assuming you have a newly installed Debian or Ubuntu machine, you will "
+"need to install rsync, the C toolchain and Rust. You can then install "
+"Routinator and start it up as an RTR server listening on 127.0.0.1 port "
+"3323 and HTTP on port 9556:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:28
+msgid "If you have an older version of Rust and Routinator, you can update via:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:35
+#: ../../source/routinator/installation.rst:150
+msgid ""
+"If you want to try the master branch from the repository instead of a "
+"release version, you can run:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:43
+msgid "Quick Start with Docker"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:45
+msgid ""
+"Due to the impracticality of complying with the ARIN TAL distribution "
+"terms in an unsupervised Docker environment, before launching the "
+"container it is necessary to first review and agree to the `ARIN Relying "
+"Party Agreement (RPA) "
+"<https://www.arin.net/resources/manage/rpki/tal/>`_. If you agree to the "
+"terms, you can let the Routinator Docker image install the TALs into a "
+"mounted volume that is later reused for the server:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:67
+msgid "System Requirements"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:69
+msgid ""
+"At this time, the size of the global RPKI data set is about 500MB. "
+"Cryptographic validation of it takes Routinator about 2 seconds on a "
+"quad-core i7."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:72
+msgid ""
+"When choosing a system to run Routinator on, make sure you have 1GB of "
+"available memory and 1GB of disk space. This will give you ample margin "
+"for the RPKI repositories to grow over time, as adoption increases."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:77
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:79
+msgid ""
+"There are three things you need to install and run Routinator: rsync, a C"
+" toolchain and Rust. You can install Routinator on any system where you "
+"can fulfil these requirements."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:83
+msgid ""
+"You need rsync because most RPKI repositories currently use it as its "
+"main means of distribution. Some of the cryptographic primitives used by "
+"Routinator require a C toolchain. Lastly, you need Rust because that’s "
+"the programming language that Routinator has been written in."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:89
+msgid "rsync"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:91
+msgid ""
+"Currently, Routinator requires the :command:`rsync` executable to be in "
+"your path. Due to the nature of rsync, it is unclear which particular "
+"version you need at the very least, but whatever is being shipped with "
+"current Linux and \\*BSD distributions and macOS should be fine. "
+"Alternatively, you can download rsync from `its website "
+"<https://rsync.samba.org/>`_."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:97
+msgid ""
+"On Windows, Routinator requires the rsync version that comes with `Cygwin"
+" <https://www.cygwin.com/>`_ – make sure to select rsync during the "
+"installation phase."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:102
+msgid "C Toolchain"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:104
+msgid ""
+"Some of the libraries Routinator depends on require a C toolchain to be "
+"present. Your system probably has some easy way to install the minimum "
+"set of packages to build from C sources. For example, :command:`apt "
+"install build-essential` will install everything you need on "
+"Debian/Ubuntu."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:110
+msgid ""
+"If you are unsure, try to run :command:`cc` on a command line and if "
+"there’s a complaint about missing input files, you are probably good to "
+"go."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:114
+msgid "Rust"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:116
+msgid ""
+"The Rust compiler runs on, and compiles to, a great number of platforms, "
+"though not all of them are equally supported. The official `Rust Platform"
+" Support <https://forge.rust-lang.org/platform-support.html>`_ page "
+"provides an overview of the various support levels."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:121
+msgid ""
+"While some system distributions include Rust as system packages, "
+"Routinator relies on a relatively new version of Rust, currently 1.40 or "
+"newer. We therefore suggest to use the canonical Rust installation via a "
+"tool called :command:`rustup`."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:126
+msgid "To install :command:`rustup` and Rust, simply do:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:132
+msgid ""
+"Alternatively, visit the `official Rust website <https://www.rust-"
+"lang.org/tools/install>`_ for other installation methods."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:135
+msgid "You can update your Rust installation later by running:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:142
+msgid "Building"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:144
+msgid "The easiest way to get Routinator is to leave it to cargo by saying:"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:157
+msgid ""
+"If you want to update an installed version, you run the same command but "
+"add the ``-f`` flag, a.k.a. force, to approve overwriting the installed "
+"version."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:161
+msgid ""
+"The command will build Routinator and install it in the same directory "
+"that cargo itself lives in, likely ``$HOME/.cargo/bin``. This means "
+"Routinator will be in your path, too."
+msgstr ""
+
+#: ../../source/routinator/installation.rst:166
+msgid "Notes"
+msgstr ""
+
+#: ../../source/routinator/installation.rst:168
+msgid ""
+"In case you want to build a statically linked Routinator, or you have an "
+"Operating System where special care needs to be taken, such as OpenBSD "
+"and CentOS, please refer to the :ref:`doc_routinator_installation_notes` "
+"section."
+msgstr ""
+

@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2020, NLnet Labs (CC-BY 3.0)
+# This file is distributed under the same license as the RPKI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPKI \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 14:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/krill/installation.rst:4
+msgid "Installation"
+msgstr ""
+
+#: ../../source/krill/installation.rst:6
+msgid ""
+"Getting started with Krill is quite easy either building from Cargo or "
+"running with Docker. In case you intend to serve your RPKI certificate "
+"and ROAs to the world yourself or you want to offer this as a service to "
+"others, you will also need to have a public Rsyncd and HTTPS web server "
+"available."
+msgstr ""
+
+#: ../../source/krill/installation.rst:11
+msgid ""
+"Krill can also be se up as a highly available, scalable service using "
+":ref:`doc_krill_manager`.  A 1-Click App on the DigitalOcean Marketplace "
+"can set up Krill with all required components, along with integration "
+"points for monitoring and log analysis."
+msgstr ""
+
+#: ../../source/krill/installation.rst:17
+msgid "Quick Start"
+msgstr ""
+
+#: ../../source/krill/installation.rst:19
+msgid ""
+"Assuming you have a newly installed Debian or Ubuntu machine, you will "
+"need to install the C toolchain, OpenSSL, curl and Rust. You can then "
+"install Krill using Cargo."
+msgstr ""
+
+#: ../../source/krill/installation.rst:23
+msgid ""
+"After the installation has completed, first create a data directory in a "
+"location of your choice. Next, generate a basic configuration file "
+"specifying a `secret token <https://xkcd.com/936/>`_ and make sure to "
+"refer to the data directory you just created. Finally, start Krill "
+"pointing to your configuration file."
+msgstr ""
+
+#: ../../source/krill/installation.rst:39
+msgid ""
+"Krill now exposes its user interface and API on "
+"``https://localhost:3000`` using a self-signed TLS certificate. You can "
+"go to this address in a web browser, accept the certificate warning and "
+"start configuring your RPKI Certificate Authority. A Prometheus endpoint "
+"is available at ``/metrics``."
+msgstr ""
+
+#: ../../source/krill/installation.rst:44
+msgid "If you have an older version of Rust and Krill, you can update via:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:51
+msgid ""
+"Using a fully qualified domain name, configuring a real TLS certificate "
+"such as Let's Encrypt, running on a different port and exposing Krill "
+"securely to other machines is all possible, but goes beyond the scope of "
+"this Quick Start."
+msgstr ""
+
+#: ../../source/krill/installation.rst:57
+msgid "Installing with Cargo"
+msgstr ""
+
+#: ../../source/krill/installation.rst:59
+msgid ""
+"There are three things you need for Krill: Rust, a C toolchain and "
+"OpenSSL. You can install Krill on any Operating System where you can "
+"fulfil these requirements, but we will assume that you will run this on a"
+" UNIX-like OS."
+msgstr ""
+
+#: ../../source/krill/installation.rst:64
+msgid "Rust"
+msgstr ""
+
+#: ../../source/krill/installation.rst:66
+msgid ""
+"The Rust compiler runs on, and compiles to, a great number of platforms, "
+"though not all of them are equally supported. The official `Rust Platform"
+" Support <https://forge.rust-lang.org/platform-support.html>`_ page "
+"provides an overview of the various support levels."
+msgstr ""
+
+#: ../../source/krill/installation.rst:71
+msgid ""
+"While some system distributions include Rust as system packages, Krill "
+"relies on a relatively new version of Rust, currently 1.40 or newer. We "
+"therefore suggest to use the canonical Rust installation via a tool "
+"called :command:`rustup`."
+msgstr ""
+
+#: ../../source/krill/installation.rst:76
+msgid "To install :command:`rustup` and Rust, simply do:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:82
+msgid ""
+"Alternatively, visit the `official Rust website <https://www.rust-"
+"lang.org/tools/install>`_ for other installation methods."
+msgstr ""
+
+#: ../../source/krill/installation.rst:85
+msgid "You can update your Rust installation later by running:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:91
+msgid ""
+"For some platforms, :command:`rustup` cannot provide binary releases to "
+"install directly. The `Rust Platform Support <https://forge.rust-lang.org"
+"/platform-support.html>`_ page lists several platforms where official "
+"binary releases are not available, but Rust is still guaranteed to build."
+" For these platforms, automated tests are not run so it’s not guaranteed "
+"to produce a working build, but they often work to quite a good degree."
+msgstr ""
+
+#: ../../source/krill/installation.rst:99
+msgid ""
+"One such example that is especially relevant for the routing community is"
+" OpenBSD. On this platform, `patches "
+"<https://github.com/openbsd/ports/tree/master/lang/rust/patches>`_ are "
+"required to get Rust running correctly, but these are well maintained and"
+" offer the latest version of Rust quite quickly."
+msgstr ""
+
+#: ../../source/krill/installation.rst:105
+msgid "Rust can be installed on OpenBSD by running:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:111
+msgid ""
+"Another example where the standard installation method does not work is "
+"CentOS 6, where you will end up with a long list of error messages about "
+"missing assembler instructions. This is because the assembler shipped "
+"with CentOS 6 is too old."
+msgstr ""
+
+#: ../../source/krill/installation.rst:116
+msgid ""
+"You can get the necessary version by installing the `Developer Toolset 6 "
+"<https://www.softwarecollections.org/en/scls/rhscl/devtoolset-6/>`_ from "
+"the `Software Collections "
+"<https://wiki.centos.org/AdditionalResources/Repositories/SCL>`_ "
+"repository. On a virgin system, you can install Rust using these steps:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:131
+msgid "C Toolchain"
+msgstr ""
+
+#: ../../source/krill/installation.rst:133
+msgid ""
+"Some of the libraries Krill depends on require a C toolchain to be "
+"present. Your system probably has some easy way to install the minimum "
+"set of packages to build from C sources. For example, :command:`apt "
+"install build-essential` will install everything you need on "
+"Debian/Ubuntu."
+msgstr ""
+
+#: ../../source/krill/installation.rst:139
+msgid ""
+"If you are unsure, try to run :command:`cc` on a command line and if "
+"there’s a complaint about missing input files, you are probably good to "
+"go."
+msgstr ""
+
+#: ../../source/krill/installation.rst:143
+msgid "OpenSSL"
+msgstr ""
+
+#: ../../source/krill/installation.rst:144
+msgid ""
+"Your system will likely have a package manager that will allow you to "
+"install OpenSSL in a few easy steps. For Krill, you will need :command"
+":`libssl-dev`, sometimes called :command:`openssl-dev`. On Debian-like "
+"Linux distributions, this should be as simple as running:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:154
+msgid "Building"
+msgstr ""
+
+#: ../../source/krill/installation.rst:156
+msgid "The easiest way to get Krill is to leave it to cargo by saying:"
+msgstr ""
+
+#: ../../source/krill/installation.rst:162
+msgid ""
+"If you want to update an installed version, you run the same command but "
+"add the ``-f`` flag, a.k.a. force, to approve overwriting the installed "
+"version."
+msgstr ""
+
+#: ../../source/krill/installation.rst:166
+msgid ""
+"The command will build Krill and install it in the same directory that "
+"cargo itself lives in, likely :file:`$HOME/.cargo/bin`. This means Krill "
+"will be in your path, too."
+msgstr ""
+
