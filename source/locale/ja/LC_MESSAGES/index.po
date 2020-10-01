@@ -41,21 +41,28 @@ msgid ""
 "documentation, we recommend that you read the :ref:`introduction page "
 "<doc_about_intro>` to get an overview of what this documentation has to "
 "offer."
-msgstr ""
+msgstr "Resource Public Key Infrastructure（RPKI）のドキュメントへようこそ。"
+"RPKIはオープンスタンダードに基づいたコミュニティ主導の技術で、"
+"インターネットルーティングをより安全にすることを目的としています。"
+"このドキュメントに初めて触れる人は、このドキュメントが提供するものの概要を知るために、 "
+":ref:`はじめに <doc_about_intro>` を読むことをお勧めします。"
 
 #: ../../source/index.rst:17
 msgid ""
 "The table of contents below and in the sidebar should let you easily "
 "access the documentation for your topic of interest. You can also use the"
 " search function in the top left corner."
-msgstr ""
+msgstr "以下の目次とサイドバーを使うと、興味のあるトピックのドキュメントに簡単に"
+"アクセスすることができます。左上の検索機能もご活用ください。
 
 #: ../../source/index.rst:21
 msgid ""
 "This documentation is an open source project maintained by the RPKI team "
 "at NLnet Labs, with contributions from  the network operator community "
 "around the world. We always appreciate your feedback and improvements."
-msgstr ""
+msgstr "このドキュメントはNLnet LabsのRPKIチームによってメンテナンスされ、"
+"世界中のネットワーク運用者コミュニティからコントリビューションを受けている"
+"オープンソースプロジェクトです。皆様からのフィードバックと改善をいつでもお待ちしています。"
 
 #: ../../source/index.rst:26
 msgid ""
@@ -65,15 +72,20 @@ msgid ""
 "  If you are interested in providing a translation for this project,  "
 "please read `this guide <https://docs.readthedocs.io/en/latest/guides"
 "/manage-translations.html>`_ to get started."
-msgstr ""
+msgstr "`GitHubリポジトリ <https://github.com/NLnetLabs/rpkidoc/issues>`_ "
+"でIssueやプルリクエストを出したり、`RPKIメーリングリスト "
+"<https://lists.nlnetlabs.nl/mailman/listinfo/rpki>`_ に投稿することができます。"
+"このプロジェクトの翻訳に興味がある場合は、`このガイド "
+"<https://docs.readthedocs.io/en/latest/guides/manage-translations.html>`_ "
+"を参考に翻訳を始めてみてください。"
 
 #: ../../source/index.rst:35
 msgid "The main documentation is organised into the following sections:"
-msgstr ""
+msgstr "このドキュメントの構成は以下の通りです。"
 
 #: ../../source/index.rst:71
 msgid "Index"
-msgstr ""
+msgstr "索引"
 
 #: ../../source/index.rst:73
 msgid ":ref:`genindex`"

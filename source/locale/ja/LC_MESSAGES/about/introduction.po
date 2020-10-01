@@ -72,7 +72,7 @@ msgid ""
 "You can contribute to the RPKI documentation by opening an issue or "
 "sending patches via pull requests on the `GitHub source repository "
 "<https://github.com/NLnetLabs/rpki-doc>`_."
-msgstr "`GitHub source repository <https://github.com/NLnetLabs/rpki-doc>`_ "
+msgstr "`GitHubリポジトリ <https://github.com/NLnetLabs/rpki-doc>`_ "
 "でのIssueの作成やプルリクエストを通したパッチの提供を通して本ドキュメントに貢献することが可能です。"
 
 #: ../../source/about/introduction.rst:35
