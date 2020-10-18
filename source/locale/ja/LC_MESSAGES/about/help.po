@@ -58,7 +58,7 @@ msgstr "RPKIやROAは何をするものですか？"
 msgid ""
 "They provide a method for the originator of a route to assert they are "
 "the correct originator and that other originators are not valid."
-msgstr "RPKIやROAは、経路の生成元にについて、自分たちが正当な生成元であり"
+msgstr "RPKIやROAは、経路の生成元について、自分たちが正当な生成元であり"
 "それ以外は正しくないことを主張するための手段を提供します。"
 
 #: ../../source/about/help.rst:25
