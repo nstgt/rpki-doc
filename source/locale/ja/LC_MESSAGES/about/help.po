@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/about/help.rst:4
 msgid "Quick Help"
-msgstr ""
+msgstr "クイックヘルプ"
 
 #: ../../source/about/help.rst:6
 msgid ""
@@ -30,31 +30,40 @@ msgid ""
 "resources that can be of assistance. This page is not meant for experts, "
 "and many technicalities will be glossed over in order to be able to "
 "provide easy to understand answers for all knowledge levels."
-msgstr ""
+msgstr "あなたがこのページを読んでいるということは、「あなたの経路が"
+"RPKI ROAによってInvalidになっていますよ。」と他の誰かから言われたのだけれど、"
+"自分がその意味を理解できないという状況に陥っているからかもしれません。"
+"このページの内容の目的は、あなたにその正しい方向性を示すことと、"
+"さらに役に立つ情報を提供することです。"
+"このページはエキスパートを対象にしたものではなく、"
+"すべての人たちにわかりやすい回答を提供できるように"
+"多くの専門用語に目をつぶって説明します。"
 
 #: ../../source/about/help.rst:15
 msgid "What is RPKI or ROA?"
-msgstr ""
+msgstr "RPKIやROAとは？"
 
 #: ../../source/about/help.rst:16
 msgid ""
 "RPKI stands for Resource Public Key Infrastructure, ROA stands for Route "
 "Origin Authorisation."
-msgstr ""
+msgstr "RPKIはResource Public Key Infrastructure（リソース公開鍵基盤）の略で、"
+"ROAはRoute Origin Authorisationの略です。"
 
 #: ../../source/about/help.rst:20
 msgid "What do they do?"
-msgstr ""
+msgstr "RPKIやROAは何をするものですか？"
 
 #: ../../source/about/help.rst:21
 msgid ""
 "They provide a method for the originator of a route to assert they are "
 "the correct originator and that other originators are not valid."
-msgstr ""
+msgstr "RPKIやROAは、経路の生成元について、自分たちが正当な生成元であり"
+"それ以外は正しくないことを主張するための手段を提供します。"
 
 #: ../../source/about/help.rst:25
 msgid "How does it work?"
-msgstr ""
+msgstr "どのように動作しますか？"
 
 #: ../../source/about/help.rst:26
 msgid ""
@@ -65,54 +74,64 @@ msgid ""
 "origination ASN, which then generates a ROA for that particular "
 "combination of route and origination ASN.  This ROA is then published out"
 " by the RIR so that anyone can view them."
-msgstr ""
+msgstr "すべてのIPアドレス空間（v4+v6）はIANAによって割り当てられます。"
+"彼らはこのIPアドレス空間をRIR（ARIN、RIPE NCC、APNIC、LANNIC、AFRINIC）のうちの"
+"どれかひとつに委任しています。これらのRIRは他の組織に順に割り当てます。"
+"各RIRにはIPアドレス空間の所有者がorigin AS番号を主張するポータルがあります。"
+"このポータルは経路とorigin AS番号の組み合わせに対応するROAを生成します。"
+"そしてこのROAは誰でも見ることのできるようにRIRによって公開されます。"
 
 #: ../../source/about/help.rst:34
 msgid "What is in a ROA?"
-msgstr ""
+msgstr "ROAはどのようなものですか？"
 
 #: ../../source/about/help.rst:35
 msgid ""
 "A ROA is a signed statement that consists of a prefix, a maximum prefix "
 "length, and originating ASN."
-msgstr ""
+msgstr "ROAはprefix、maximum prefix length、origin AS番号から構成される署名付き宣言です。"
 
 #: ../../source/about/help.rst:39
 msgid "What happens next?"
-msgstr ""
+msgstr "次に起こることは何ですか？"
 
 #: ../../source/about/help.rst:40
 msgid ""
 "Any operator is free to get that list of ROAs from the RIRs and use that "
 "to tell their routers to take action based on the ROA.  A particular "
 "announcement will generally have one of three states:"
-msgstr ""
+msgstr "どんなオペレーターでもRIRからROAのリストを取得し、"
+"ROAに基づいてアクションを実行するために使用することができます。"
+"通常、それぞれの経路広報は次の３つのうちのいずれかの状態になります。"
 
 #: ../../source/about/help.rst:47
 msgid "NotFound (a.k.a. Unknown)"
-msgstr ""
+msgstr "NotFound（別名Unknown）"
 
 #: ../../source/about/help.rst:45
 msgid ""
 "This is the default state if no ROA has been made for the announcement. "
 "It is expected that all operators will allow these routes to be installed"
 " in their routers."
-msgstr ""
+msgstr "経路広報に対応するROAが作成されていない場合、これがデフォルトの状態となります。"
+"すべてのオペレーターが、これらの経路をルーターにインストールするでしょう。"
 
 #: ../../source/about/help.rst:52
 msgid "Valid"
-msgstr ""
+msgstr "Valid"
 
 #: ../../source/about/help.rst:50
 msgid ""
 "This is the state if the ROA and route announcement matches.  It is "
 "expected that all operators will allow these routes to be installed in "
 "their routers. It is possible they may up-preference these routes."
-msgstr ""
+msgstr "ROAが経路広報と一致する場合の状態を表します。すべてのオペレーターが、"
+"これらの経路をルーターにインストールするでしょう。"
+"これらの経路を優先する可能性もあります。"
 
 #: ../../source/about/help.rst:59
 msgid "Invalid"
-msgstr ""
+msgstr "Invalid"
 
 #: ../../source/about/help.rst:55
 msgid ""
@@ -121,11 +140,13 @@ msgid ""
 "the maximum prefix length that is set in the ROA.  If an operator is "
 "using RPKI in a strict fashion, odds are good that this announcement will"
 " not be installed into their routers."
-msgstr ""
+msgstr "ROAと経路広報が異なる場合の状態を表します。ROAで設定されているorigin AS番号が異なるか、"
+"maximum prefix lengthよりもmore specificな経路であるかのいずれかです。"
+"オペレーターが厳密にRPKIを使用している場合、この経路広報はルーターにインストールされません。"
 
 #: ../../source/about/help.rst:62
 msgid "What can I do about my route having an Invalid state?"
-msgstr ""
+msgstr "自分の経路がInvalid状態にある場合どうすればよいですか？"
 
 #: ../../source/about/help.rst:63
 msgid ""
@@ -133,27 +154,29 @@ msgid ""
 "owner of the IP space. Most likely the owner of the IP space has created "
 "their ROAs in the Hosted RPKI interface of the RIR, which is part of "
 "their respective member portals:"
-msgstr ""
+msgstr "ROAに変更を加えることができる唯一の組織は、IPアドレス空間のRIRにリストされた所有者です。"
+"IPアドレス空間の所有者は以下のようなメンバーポータルの一部である"
+"RIRのホスト型RPKIのインターフェースでROAを作成した可能性が高いです。"
 
 #: ../../source/about/help.rst:68
 msgid "AFRINIC: https://my.afrinic.net"
-msgstr ""
+msgstr "AFRINIC: https://my.afrinic.net"
 
 #: ../../source/about/help.rst:69
 msgid "APNIC: https://myapnic.net"
-msgstr ""
+msgstr "APNIC: https://myapnic.net"
 
 #: ../../source/about/help.rst:70
 msgid "ARIN: https://account.arin.net"
-msgstr ""
+msgstr "ARIN: https://account.arin.net"
 
 #: ../../source/about/help.rst:71
 msgid "LACNIC: https://milacnic.lacnic.net"
-msgstr ""
+msgstr "LACNIC: https://milacnic.lacnic.net"
 
 #: ../../source/about/help.rst:72
 msgid "RIPE NCC: https://my.ripe.net"
-msgstr ""
+msgstr "RIPE NCC: https://my.ripe.net"
 
 #: ../../source/about/help.rst:74
 msgid ""
@@ -162,5 +185,8 @@ msgid ""
 "and made a ROA for the IP space in question.  There is no way for it to "
 "have to been done by itself.  In other words, there must already be an "
 "account at the RIR that is linked to the owner of the IP space."
-msgstr ""
+msgstr "最初に気をつけておいてほしいことがあります。RPKI Invalid経路が存在するということは、"
+"誰かがすでに上記のポータルのうちのひとつにログインし、問題となっているIPアドレス空間のROAを"
+"作成しているということです。ROA作成者自身以外はそのROAを作成することはできません。"
+"つまり、そのIPアドレス空間の所有者にリンクされたRIRにアカウントがすでに存在している必要があります。"
 
