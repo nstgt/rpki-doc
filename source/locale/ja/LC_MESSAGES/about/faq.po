@@ -57,9 +57,9 @@ msgid ""
 msgstr "インターネットのグローバルルーティングシステムは機能的に独立した多数の主体"
 "（Autonomous Systems）で構成されており、各々がBGP（Border Gateway Protocol）"
 "を使用してルーティング情報を交換します。このシステムは設計上、非常に動的で柔軟性に富んでいます。"
-"接続性とルーティングトポロジはルーティング情報の変更に左右され、その変更というのは"
+"接続性とルーティングトポロジーはルーティング情報の変更に左右され、その変更というのは"
 "僅か数分で世界中に伝播します。このシステムの弱点は、これらの変更をBGPというプロトコル"
-"から離れ、その外部に存在する情報で検証出来ない点にあります。"
+"から離れ、その外側に存在する情報で検証出来ない点にあります。"
 
 #: ../../source/about/faq.rst:31
 msgid ""
@@ -70,9 +70,9 @@ msgid ""
 "addressing scheme in a cryptographic system. These information are "
 "public, and anyone can get access to validate their integrity using "
 "cryptographic methods."
-msgstr "RPKIは、BGPで交換される情報の正当性を検証するために、BGPというプロトコルの外側に"
+msgstr "RPKIは、BGPで交換される情報の正当性を検証するために、BGPというプロトコルの外部に"
 "データを定義する手法です。RPKIの標準仕様は、インターネットルーティングやアドレスに関する"
-"資源情報の一部を暗号システムに落とし込むことを目的としてIETF（Internet Engineering "
+"リソース情報の一部を暗号システムに落とし込むことを目的としてIETF（Internet Engineering "
 "Task Force）によって開発されました。"
 "これらの情報は公開されており、誰もがアクセスして暗号的にその整合性を検証することができます。"
 
@@ -97,7 +97,7 @@ msgstr "Default Free Zoneのインターネットエンジニアリングに長�
 "1998年に :RFC:`2280` で定義されたルーティングポリシー仕様言語であるRPSL（Routing Policy "
 "Specification Language）をよく知っているでしょう。RPSLはその初期にかなりの熱狂を生み出し"
 "ある種の牽引力を見せていましたが、当時はインターネットが急速に成長しており、"
-"データの信頼性よりもデータの可用性に主眼が置かれていました。当時は誰もが最終的なPINGを果たすために、"
+"データの信頼性よりもデータの可用性に主眼が置かれていました。当時は誰もが最終的なpingを果たすために、"
 "他人のRPSL解析スクリプトを使って、「とにかく動くように」最低限必要なポリシーを"
 "その場しのぎで文書化することに忙しかったのです。"
 
@@ -129,7 +129,7 @@ msgid ""
 msgstr "RPKIは主にデータの信頼性、適時性、正確性に焦点を当てることで、これまでの取り組みを補完し"
 "拡大することを目的としています。RPKIのROAは、厳格な基準に基づいてRIRによって階層的に委任され、"
 "暗号化された検証可能なものです。これにより、インターネットコミュニティは"
-"インターネット上に最新かつ正確なIPアドレス広報元のデータを構築することが可能となります。"
+"インターネット上に最新かつ正確なIPアドレス生成元のデータを構築することが可能となります。"
 
 #: ../../source/about/faq.rst:66
 msgid ""
@@ -152,7 +152,7 @@ msgstr "IRRの主な弱点は、それがグローバルに展開されたシス
 "その結果、公開されているルーティングの意向に関するすべての情報のうち、"
 "何が正当で真正なデータであり、何がそうでないのかを判断することが困難になります。"
 "RPKIはこれらの2つの問題を解決するもので、世界中の正当なIPリソース保有者が"
-"暗号的に検証可能な申し立てを確実に行うことを可能にします。"
+"暗号的に検証可能な主張を確実に行うことを可能にします。"
 
 #: ../../source/about/faq.rst:77
 msgid "Is it true that BGP4 is just not up to the task any longer?"
@@ -188,21 +188,21 @@ msgid ""
 "These are well established and openly governed organisations. Each "
 "operator that wishes to get an RPKI resource certificate already has a "
 "contractual relationship with one or more of the RIRs."
-msgstr "これらのは十分に確立したオープンに管理されている組織である。RPKIリソース証明書"
-"の取得を希望する各事業者は、すでに一つ以上のRIRと契約関係を結んでいるます。"
+msgstr "これらは十分に確立したオープンに管理されている組織です。RPKIリソース証明書"
+"の取得を希望する各事業者は、すでに一つ以上のRIRと契約関係を結んでいると言えます。"
 
 #: ../../source/about/faq.rst:94
 msgid ""
 "What is the value of RPKI based BGP Origin Validation without Path "
 "Validation?"
-msgstr "パス検証を伴わないRPKIベースのオリジン検証の価値とは何でしょうか？"
+msgstr "Path Validationを伴わないRPKIベースのOrigin Validationの価値とは何でしょうか？"
 
 #: ../../source/about/faq.rst:96
 msgid ""
 "While Path Validation is a desirable characteristic, the existing RPKI "
 "origin validation functionality addresses a large portion of the problem "
 "surface."
-msgstr "Path Validationの導入は望ましいものですが、それがなかったとしても既存の
+msgstr "Path Validationの導入は望ましいものですが、それがなかったとしても既存の"
 "RPKI Origin Validation機能は大部分の問題に対応することができます。"
 
 #: ../../source/about/faq.rst:99
@@ -215,9 +215,9 @@ msgid ""
 "the BGP route selection process even if it originates from an "
 "impersonated but correct origin AS."
 msgstr "既存の運用上および経済上のインセンティブにより、各ネットワークにとって最も重要な"
-"経路は可能な限り最短のAS Pathを経由したものとなります。一つの例として、ネットワーク運用者は"
-"IX（インターネットエクスチェンジ）やプライベートピアを通して学習した経路のLocal Preferenceを"
-"高く設定することがあります。これにより正しい広報元ASから広報されたかのように偽られた場合でも、
+"prefixは可能な限り最短のAS pathを経由したものとなります。一つの例として、ネットワークオペレーターは"
+"IX（インターネットエクスチェンジ）やプライベートピアを通して学習した経路のlocal preferenceを"
+"高く設定することがあります。これにより正しいorigin ASから広報されたかのように偽られた場合でも、
 "不正な経路がBGP Best Path Selectionに勝つリスクを低減することができます。"
 
 #: ../../source/about/faq.rst:106
@@ -225,7 +225,7 @@ msgid ""
 "For transit providers, direct interconnections and short AS paths are a "
 "defining characteristic, positioning them ideally to act on RPKI data and"
 " accept only valid routes for redistribution."
-msgstr "トランジットプロバイダーにとって、直接相互接続とAS Pathの短さという要素は、"
+msgstr "トランジットプロバイダーにとって、直接相互接続とAS pathの短さという要素は、"
 "RPKIに基づいて動作し、再配布のために正当な経路のみを受け入れるという理想状態に"
 "位置づけるための重要な特徴です。"
 
@@ -237,7 +237,7 @@ msgid ""
 "are not the holder of. Origin Validation would mitigate many of these "
 "problems."
 msgstr "さらには運用上の経験から、経路ハイジャックの大部分は悪意のあるものではなく、"
-"オペレータが意図せず誤って自分が保有していないprefixを広報してしまう \"fat-fingering\""
+"オペレーターが意図せず誤って自分が保有していないprefixを広報してしまう\"fat-fingering\""
 "が原因であることが分かっています。Origin Validationはこれらの問題の多くを軽減します。"
 
 
@@ -247,7 +247,7 @@ msgid ""
 "AS could still take advantage of the lack of Path Validation in some "
 "circumstances, widespread RPKI Origin Validation implementation would "
 "make such instances easier to pinpoint and address."
-msgstr "広報元ASを意図的になりすまそうとする攻撃者が、Path Validationがないことを"
+msgstr "origin ASを意図的になりすまそうとする攻撃者が、Path Validationがないことを"
 "利用しようとする可能性はあるものの、RPKI Origin Validationが普及することにより"
 "そのような事例を特定して対処することが容易になります。"
 
@@ -261,7 +261,7 @@ msgstr "ROAとルーターが受信した経路とを比較すると、どのよ
 msgid ""
 "In short, routes can have the state Valid, Invalid, or NotFound (a.k.a. "
 "Unknown)."
-msgstr "経路はValid、Invalid、NotFound (a.k.a. Unknown) のいずれかの状態を持つことになります。"
+msgstr "経路はValid、Invalid、NotFound (別名Unknown) のいずれかの状態を持つことになります。"
 
 #: ../../source/about/faq.rst:126
 msgid "Valid: The route announcement is covered by at least one ROA"
@@ -272,8 +272,8 @@ msgid ""
 "Invalid: The prefix is announced from an unauthorised AS or the "
 "announcement is more specific than is allowed by the maximum length set "
 "in a ROA that matches the prefix and AS"
-msgstr "Invalid: prefixが不当なASから経路広報されている、もしくはprefixとASはROAと"
-"一致しているが、ROAで設定されたmaximum lengthを超過したprefix長をもつ経路広報である。"
+msgstr "Invalid: prefixが不当なASから経路広報されているか、もしくはprefixとASはROAと"
+"一致しているが、ROAで設定されたmaximum prefix lengthよりもmore specificな経路広報である。"
 
 #: ../../source/about/faq.rst:128
 msgid ""
@@ -302,7 +302,7 @@ msgid ""
 "one of the ASes along the preceding AS path."
 msgstr "経路リークとは意図した範囲を超えて経路広報が伝搬する事象を指します。"
 "つまりそれは、BGPで経路を学習したある自律システム（AS）から他のASへの経路広報が、"
-"受信者、送信者、またはAS PATHに含まれているASの意図したポリシーに違反しているということになります。"
+"受信者、送信者、またはAS pathに含まれているASの意図したポリシーに違反しているということになります。"
 
 #: ../../source/about/faq.rst:142
 msgid "A route hijack is the unauthorised origination of a route."
@@ -333,7 +333,7 @@ msgid ""
 msgstr "暗号的な検証をパスしなかった無効なROAは破棄されます。無効なROAが示す情報は"
 "ROVのプロセスにおいて考慮されません。一方で、有効なROAによりInvalidと判定された経路とはつまり、"
 "不当なASによるprefixの経路広報、もしくはprefixとASはROAと一致しているが、"
-"ROAで設定されたmaximum lengthを超過したprefix長をもつ経路広報であると言えます。"
+"ROAで設定されたmaximum prefix lengthよりもmore specificな経路広報であると言えます。"
 
 #: ../../source/about/faq.rst:159
 msgid "Operations and Impact"
@@ -351,8 +351,8 @@ msgid ""
 "processed data to the router over a light-weight protocol. This "
 "architecture causes minimal overhead for routers."
 msgstr "ありません。Route Origin Validationを実行するためにルーターで暗号化処理を行う"
-"必要はありません。署名はRelying PartyまたはRPKI Validatorと呼ばれる外部ソフトウェア"
-"によって検証され、軽量なプロトコルを介して処理済みのデータをルーターに送ります。この"
+"必要はありません。署名はrelying partyまたはRPKI validatorと呼ばれる外部ソフトウェア"
+"によって検証され、処理済みのデータは軽量なプロトコルを介してルーターに送信されます。この"
 "アーキテクチャにより、ルーターのオーバーヘッドを最小限にすることが可能です。"
 
 #: ../../source/about/faq.rst:171
@@ -373,7 +373,7 @@ msgstr "いいえ、RPKIの検証済みキャッシュに基づくフィルタ�
 
 #: ../../source/about/faq.rst:180
 msgid "Why do I need rsync on my system to use a validator?"
-msgstr "Validatorを使うためにrsyncが必要となるのはなぜですか？"
+msgstr "validatorを使うためにrsyncが必要となるのはなぜですか？"
 
 #: ../../source/about/faq.rst:182
 msgid ""
@@ -393,7 +393,7 @@ msgid ""
 msgstr "クライアントとして動作させるRPKI Relying Partyソフトウェアはrsyncに対して依存性を持ちます。"
 "rsyncのバージョンやサポートするオプション（例えば ``--contimeout`` など）が異なる場合には、思わぬ結果を招きます。"
 "さらに、そもそもrsyncを呼び出すことは非効率的です。これはRPKIの処理を考えた際には追加のプロセスであると言え、"
-"またrsyncによる出力はディスクをスキャンすることでした検証することができません。"
+"またrsyncによる出力はディスクをスキャンすることでしか検証することができません。"
 
 #: ../../source/about/faq.rst:187
 msgid ""
@@ -424,7 +424,7 @@ msgid ""
 "and APNIC. Most RPKI Validator implementations either already have RRDP "
 "support, or have it on the short term roadmap."
 msgstr "現在RRDPはARIN、RIPE NCC、APNICのサーバサイドで実装されています。また、ほとんどの"
-"RPKI Validator実装で既にRRDPをサポートしているか、短期的なロードマップ上に据えています。"
+"RPKI validator実装で既にRRDPをサポートしているか、短期的なロードマップ上に据えています。"
 
 #: ../../source/about/faq.rst:201
 msgid ""
@@ -442,7 +442,7 @@ msgid ""
 "experience before deciding if they want to run their own CA."
 msgstr "RPKIは分散型システムとして設計されており、各組織が独自のCAを運営し、証明書とROA"
 "を自ら発行できるようになっています。RIRが提供するホスト型RPKIシステムは参入障壁を下げ、"
-"オペレータが独自のCAを運営するかどうかを決める前に運用経験を積むことを可能にします。"
+"オペレーターが独自のCAを運営するかどうかを決める前に運用経験を積むことを可能にします。"
 
 #: ../../source/about/faq.rst:209
 msgid ""
@@ -452,7 +452,7 @@ msgid ""
 "across multiple RIR regions, or have BGP automation in place that they "
 "would like to integrate with ROA management, can all choose to run a CA "
 "on their own systems."
-msgstr "多くのオペレータにとっては長期的に見てホスト型RPKIシステムで十分であると言えます。"
+msgstr "多くのオペレーターにとっては長期的に見てホスト型RPKIシステムで十分であると言えます。"
 "しかし例えば、管理のためのWebインターフェースに依存したくない、複数のRIRリージョン"
 "に跨るアドレス空間を管理している、またはROA管理と統合したBGPの自動化を行っているなどの"
 "組織は、独自のシステム上でCAを運用する選択をすることができます。"
@@ -463,7 +463,7 @@ msgstr "多くのオペレータにとっては長期的に見てホスト型RPK
 msgid ""
 "Should I run a validator myself, when I can use an external data source I"
 " found on the Internet?"
-msgstr "インターネット上で外部のデータソースを見つけたとしても、自分自身でValidatorを"
+msgstr "インターネット上で外部のデータソースを見つけたとしても、自分自身でvalidatorを"
 "動作させるべきなのでしょうか？"
 
 #: ../../source/about/faq.rst:218
@@ -471,7 +471,7 @@ msgid ""
 "The value of signing the authoritative statements about routing intent by"
 " the resource holder comes from being able to validate that the data is "
 "authentic and has not been tampered with in any way."
-msgstr "リソース保有者が資源保有の正当性を主張することに対して署名を施すことの価値は、"
+msgstr "リソース保有者がリソース保有の正当性を主張することに対して署名を施すことの価値は、"
 "データが本物であり、いかなる方法でも改竄されていないことを検証できることに由来しています。"
 
 #: ../../source/about/faq.rst:222
@@ -519,8 +519,8 @@ msgid ""
 "if RPKI were never used. Routes with this state should be accepted "
 "according to section 5 of :RFC:`7115`, as this state will unfortunately "
 "be true for the majority of routes."
-msgstr "RPKIはルーティングに関する意図を肯定的に表現します。もしも全てのRPKI "
-"Validatorが使用不能になったり、全ての証明書やROAが失効したりしたとしても、ROVによる"
+msgstr "RPKIはルーティングに関する意図を肯定的に評価します。もしも全てのRPKI "
+"validatorが使用不能になったり、全ての証明書やROAが失効したりしたとしても、ROVによる"
 "経路の検証結果はRPKIを使用しなかった場合と同様のNotFoundに戻るだけです。"
 ":RFC:`7115` の第5章によると、NotFoundと判定された経路はacceptするべきと"
 "記載されています。なお、現状多くの経路は残念ながらNotFoundと判定されています。"
@@ -529,7 +529,7 @@ msgstr "RPKIはルーティングに関する意図を肯定的に表現しま�
 msgid ""
 "What if the Validator I use crashes and my router stops getting a feed. "
 "What will happen to the prefixes I learn over BGP?"
-msgstr "Validatorがクラッシュしルーターがデータを受信できなくなった場合、ルーターが"
+msgstr "validatorがクラッシュしルーターがデータを受信できなくなった場合、ルーターが"
 "BGPで学習したprefixはどうなりますか？"
 
 #: ../../source/about/faq.rst:250
@@ -538,16 +538,16 @@ msgid ""
 "multiple Validators for redundancy. It is recommended that you run "
 "multiple instances, preferably from independent publishers and on "
 "separate subnets. This way you rely on multiple caches."
-msgstr "Route Origin Validationをサポートするすべてのルーターでは、冗長性のために"
-"複数のバリデーターを指定することができます。復数のValidatorインスタンスを、できれば"
-"異なるサブネット上で独立して動作させることが推奨されます。この方法により復数の"
-"キャッシュに依存する形になります。"
+msgstr "経路のOrigin Validationをサポートするすべてのルーターでは、冗長性のために"
+"複数のvalidatorを指定することができます。復数のvalidatorインスタンスを、できれば"
+"異なるサブネット上で独立して動作させることが推奨されます。この方法によりキャッシュの冗長性を"
+"確保することができます。"
 
 #: ../../source/about/faq.rst:255
 msgid ""
 "In case of a complete failure, all routes will fall back to the NotFound "
 "state, as if Origin Validation were never used."
-msgstr "仮に全てのValidatorが動作不能に陥ったとしても、全ての経路はRoute "
+msgstr "仮に全てのvalidatorが動作不能に陥ったとしても、全ての経路は"
 "Origin Validationを実施しなかった時と同じようにNotFoundと判定されます。"
 
 #: ../../source/about/faq.rst:259
@@ -564,8 +564,8 @@ msgid ""
 ":RFC:`8416`, “Simplified Local Internet Number Resource Management with "
 "the RPKI (SLURM)”."
 msgstr "特定のprefixや経路広報に対して独自のポリシーを適用し、リポジトリから受信した"
-"RPKIデータを上書きすることが可能です。オーバーライドの方法は、:RFC:`8416` “Simplified "
-"Local Internet Number Resource Management with the RPKI (SLURM)” で標準化されています。"
+"RPKIデータを上書きすることが可能です。オーバーライドの方法は、:RFC:`8416`“Simplified "
+"Local Internet Number Resource Management with the RPKI (SLURM)”で標準化されています。"
 
 #: ../../source/about/faq.rst:268
 msgid ""
@@ -586,51 +586,56 @@ msgstr "経路に署名を施してROAを作成することは良い試みであ
 
 #: ../../source/about/faq.rst:275
 msgid "Miscellaneous"
-msgstr ""
+msgstr "その他"
 
 #: ../../source/about/faq.rst:278
 msgid "What is the global adoption and data quality of RPKI like?"
-msgstr ""
+msgstr "世界におけるRPKIの採用率とそのデータの品質はいかほどでしょうか？"
 
 #: ../../source/about/faq.rst:280
 msgid ""
 "There are several initiatives that measure the adoption and data quality "
 "of RPKI:"
-msgstr ""
+msgstr "様々な取り組みにより採用度合いやデータ品質が計測されています。"
 
 #: ../../source/about/faq.rst:282
 msgid ""
 "`RPKI Analytics <https://www.nlnetlabs.nl/projects/rpki/rpki-"
 "analytics/>`__, by NLnet Labs"
-msgstr ""
+msgstr "`RPKI Analytics <https://www.nlnetlabs.nl/projects/rpki/rpki-"
+"analytics/>`__, by NLnet Labs"
 
 #: ../../source/about/faq.rst:283
 msgid ""
 "`Global certificate and ROA statistics <http://certification-"
 "stats.ripe.net>`_, by RIPE NCC"
-msgstr ""
+msgstr "`Global certificate and ROA statistics <http://certification-"
+"stats.ripe.net>`_, by RIPE NCC"
 
 #: ../../source/about/faq.rst:284
 msgid ""
 "`Cirrus Certificate Transparency Log "
 "<https://ct.cloudflare.com/logs/cirrus>`_, by Cloudflare"
-msgstr ""
+msgstr "`Cirrus Certificate Transparency Log "
+"<https://ct.cloudflare.com/logs/cirrus>`_, by Cloudflare"
 
 #: ../../source/about/faq.rst:285
 msgid ""
 "`The RPKI Observatory <https://nusenu.github.io/RPKI-Observatory/>`_, by "
 "nusenu"
-msgstr ""
+msgstr "`The RPKI Observatory <https://nusenu.github.io/RPKI-Observatory/>`_, by "
+"nusenu"
 
 #: ../../source/about/faq.rst:286
 msgid "`RPKI Deployment Monitor <https://rpki-monitor.antd.nist.gov>`_, by NIST"
-msgstr ""
+msgstr "`RPKI Deployment Monitor <https://rpki-monitor.antd.nist.gov>`_, by NIST"
 
 #: ../../source/about/faq.rst:289
 msgid ""
 "I want to use the RPKI services from a specific RIR that I'm not "
 "currently a member of. Can I transfer my resources?"
-msgstr ""
+msgstr "現在割り当てを受けているRIRとは異なる特定のRIRのRPKIサービスを利用したいです。"
+"リソースを移転することはできますか？"
 
 #: ../../source/about/faq.rst:291
 msgid ""
@@ -642,20 +647,27 @@ msgid ""
 "because they are are looking for a specific set of terms with regards to "
 "the holdership of their resources. Please check with your RIR for the "
 "possibilities and conditions for resource transfers."
-msgstr ""
+msgstr "各RIRが提供するRPKIサービスは利用条件、利用規約、可用性や使い勝手が異なりますが、"
+"ほとんどのRIRがメンバーに対してRIR間のリソースの転移を許可することを定めたポリシーを持っています。"
+"組織がリソース転移を望む理由としては、管理を簡易化するために一つの事業体の配下に置きたい"
+"ということが挙げられます。他にはリソースの保有に関する規約をまとめたい、ということがあるかもしれません。"
+"リソース移転の可能性と条件については、所属するRIRに確認してください。"
 
 #: ../../source/about/faq.rst:301
 msgid ""
 "Will RPKI be used as a censorship mechanism allowing governments to make "
 "arbitrary prefixes unroutable on a whim?"
-msgstr ""
+msgstr "RPKIは政府が思いつきで任意のprefixをルーティングできないようにする"
+"検閲プログラムとして利用される可能性がありますか？"
 
 #: ../../source/about/faq.rst:303
 msgid ""
 "Unlikely. In order to suppress a prefix, it would be necessary to both "
 "revoke the existing ROA (if one is present) and publish a conflicting ROA"
 " with a different origin."
-msgstr ""
+msgstr "そういったことはないでしょう。特定のprefixが広報されないようにするためには、"
+"（存在する場合には）既存のROAを無効にした上で、異なるorigin ASで競合するROAを"
+"作成する必用があります。"
 
 #: ../../source/about/faq.rst:307
 msgid ""
@@ -665,11 +677,13 @@ msgid ""
 "Registry under which it was issued, will be immediately accessible to "
 "everyone). A government would be much better off walking into the data "
 "center and confiscate your equipment."
-msgstr ""
+msgstr "このような特徴により、検閲メカニズムとしてRPKIを使用することは、その目標を達成"
+"するためにはやや複雑で不確実な方法であると言えます。また同時に広い可視化性を持っています。"
+"（競合するROAは、それが発行されたRIRと同じように誰もが直ちにアクセスすることができるようになります。）"
 
 #: ../../source/about/faq.rst:314
 msgid "What are the long-term plans for RPKI?"
-msgstr ""
+msgstr "RPKIの長期的な計画はどうなっていますか？"
 
 #: ../../source/about/faq.rst:316
 msgid ""
@@ -680,5 +694,11 @@ msgid ""
 "sidrops-aspa-profile <https://tools.ietf.org/html/draft-azimov-sidrops-"
 "aspa-profile>`_ and `draft-azimov-sidrops-aspa-verification "
 "<https://tools.ietf.org/html/draft-azimov-sidrops-aspa-verification>`_."
-msgstr ""
+msgstr "RPKI Route Origin Validationが様々な場所で導入されてきているため、"
+"それ基づいてPath Validationを提供しようとするいくつかの試みがなされています。"
+"`draft-azimov-sidrops-aspa-profile <https://tools.ietf.org/html/draft-azimov"
+"-sidrops-aspa-profile>`_ や `draft-azimov-sidrops-aspa-verification "
+"<https://tools.ietf.org/html/draft-azimov-sidrops-aspa-verification>`_ といった"
+"ドラフトで定義されているAutonomous System Provider Authorisation（ASPA）は"
+"現在IETFにおいて最も牽引力を持っています。"
 
