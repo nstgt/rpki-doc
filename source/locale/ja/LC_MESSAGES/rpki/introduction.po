@@ -19,14 +19,15 @@ msgstr ""
 
 #: ../../source/rpki/introduction.rst:5
 msgid "Introduction"
-msgstr ""
+msgstr "イントロダクション"
 
 #: ../../source/rpki/introduction.rst:7
 msgid ""
 "Resource Public Key Infrastructure (RPKI) revolves around the right to "
 "use Internet number resources, such as IP addresses and autonomous system"
 " (AS) numbers."
-msgstr ""
+msgstr "リソース公開鍵基盤（RPKI）は、IPアドレスやAS番号などのインターネット番号リソース"
+"を使用する権利を中心に運用されます。"
 
 #: ../../source/rpki/introduction.rst:11
 msgid ""
@@ -35,11 +36,14 @@ msgid ""
 "can make authoritative, signed statements about the resources listed on "
 "it. To understand the structure of RPKI and its usage, we must first look"
 " at how Internet number resources are allocated globally."
-msgstr ""
+msgstr "PKIでは、IPアドレスブロックやAS番号の正当な所有者がリソース証明書を取得することができ、"
+"証明書を使用することで証明書に記載されているリソースについて、信頼できる署名済み宣言を作成することができます。"
+"RPKIの構造とその使用方法を理解するには、まずインターネット番号リソースがグローバルでどのように"
+"割り当てられているかを見ていく必要があるでしょう。"
 
 #: ../../source/rpki/introduction.rst:20
 msgid "Internet Number Resource Allocation"
-msgstr ""
+msgstr "インターネット番号リソースの割り当て"
 
 #: ../../source/rpki/introduction.rst:22
 msgid ""
@@ -54,11 +58,18 @@ msgid ""
 "(IANA), which is presently a function of the `Internet Corporation for "
 "Assigned Names and Numbers <https://en.wikipedia.org/wiki/ICANN>`_ "
 "(ICANN)."
-msgstr ""
+msgstr "組織として正式に管理されるまでは、IPアドレスやAS番号といったインターネット番号リソースは、"
+"`Jon Postel "
+"<https://en.wikipedia.org/wiki/Jon_Postel>`_ 氏によって管理されていました。"
+"当時、彼は南カリフォルニア大学（the University of Southern California/USC）の"
+"情報科学研究所（the Information Sciences Institute/ISI）に勤務していました。"
+"また、彼は `IANA <https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority>`_ "
+"の役割を果たしていました。これは現在では `ICANN <https://en.wikipedia.org/wiki/ICANN>`_ "
+"の機能の1つとなっています。"
 
 #: ../../source/rpki/introduction.rst:37
 msgid "Jon Postel in 1994, with a map of Internet top-level domains"
-msgstr ""
+msgstr "インターネットのトップレベルドメインの図を説明する1994年当時のJon Postel氏"
 
 #: ../../source/rpki/introduction.rst:39
 msgid ""
@@ -71,51 +82,58 @@ msgid ""
 "allocated from IANA to one of the RIRs. In turn, the RIRs would allocate "
 "smaller blocks to their member organisations, and so on. IPv6 address "
 "blocks and AS numbers are allocated in the same way."
-msgstr ""
+msgstr "当初、IANA機能はグローバルに実行されていましたが、インターネットの拡大に伴って"
+"業務量が増大したため、地域レベルでこの責任を引き受けるために、`地域インターネットレジストリ "
+"<https://en.wikipedia.org/wiki/Regional_Internet_registry>`_ （RIR）"
+"が何年もかけて設立されました。2011年にIPv4の利用可能なプールが使い果たされるまで、"
+"これはIPv4のアドレス空間の大きなブロックが定期的にIANAからRIRの1つに割り当てられていたということです。次にRIRはより小さなブロックを配下のメンバー組織に割り当てるといったように順番に割り当てられていきます。"
+"IPv6アドレスとAS番号も同じ方法で割り当てられます。"
 
 #: ../../source/rpki/introduction.rst:48
 msgid ""
 "Today, there are five RIRs responsible for the allocation and "
 "registration of Internet number resources within a particular region of "
 "the world:"
-msgstr ""
+msgstr "現在、世界中の特定の地域内でインターネット番号リソースの割り当てと"
+"登録を担当するRIRは5つあります。"
 
 #: ../../source/rpki/introduction.rst:51
 msgid ""
 "The `African Network Information Center <https://www.afrinic.net/>`_ "
 "(AFRINIC) serves Africa"
-msgstr ""
+msgstr "`AFRINIC <https://www.afrinic.net/>`_ はアフリカ地域を提供しています。"
 
 #: ../../source/rpki/introduction.rst:52
 msgid ""
 "The `American Registry for Internet Numbers <https://www.arin.net/>`_ "
 "(ARIN) serves Antarctica, Canada, parts of the Caribbean, and the United "
 "States"
-msgstr ""
+msgstr "`ARIN <https://www.arin.net/>`_ は南極大陸、カナダ、カリブ海地域の一部、アメリカ合衆国"
+"を提供しています。"
 
 #: ../../source/rpki/introduction.rst:53
 msgid ""
 "The `Asia-Pacific Network Information Centre <https://www.apnic.net/>`_ "
 "(APNIC) serves East Asia, Oceania, South Asia, and Southeast Asia"
-msgstr ""
+msgstr "`APNIC <https://www.apnic.net/>`_ は東アジア、オセアニア、南アジア、東南アジアを提供しています。"
 
 #: ../../source/rpki/introduction.rst:54
 msgid ""
 "The `Latin America and Caribbean Network Information Centre "
 "<https://www.lacnic.net/>`_ (LACNIC) serves most of the Caribbean and all"
 " of Latin America"
-msgstr ""
+msgstr "`LACNIC <https://www.lacnic.net/>`_ はカリブ海の大部分とラテンアメリカの全てを提供しています。"
 
 #: ../../source/rpki/introduction.rst:55
 msgid ""
 "The `Réseaux IP Européens Network Coordination Centre "
 "<https://www.ripe.net/>`_ (RIPE NCC) serves Europe, the Middle East, "
 "Russia, and parts of Central Asia"
-msgstr ""
+msgstr "`RIPE NCC <https://www.ripe.net/>`_ はヨーロッパ、中東、ロシア、中央アジアの一部を提供しています。"
 
 #: ../../source/rpki/introduction.rst:62
 msgid "The service regions of the five Regional Internet Registries"
-msgstr ""
+msgstr "5つのインターネットレジストリのサービス提供地域"
 
 #: ../../source/rpki/introduction.rst:64
 msgid ""
@@ -128,15 +146,21 @@ msgid ""
 "Internet service providers, enterprises, or academic institutions. LIRs "
 "either use the allocated IP address blocks themselves, or assign them to "
 "End User organisations."
-msgstr ""
+msgstr "APNICおよびLACNIC地域では、例えばブラジルのNIC.brや日本のJPNICのように"
+"インターネット番号リソースが国別インターネットレジストリ（NIR）に割り当てられる"
+"場合があります。NIRはアドレス空間をそのメンバーまたは構成要素に割り当てます。"
+"これらは通常、国レベルで組織されます。その他の地域では、通常、RIRは、"
+"ローカルインターネットレジストリ（LIR）と呼ばれるメンバー組織に直接割り当てられます。"
+"ほとんどのLIRは、インターネットサービスプロバイダー、企業、または学術機関です。"
+"LIRは割り当てられたIPアドレスブロックを自組織で使用するか、エンドユーザー組織に割り当てます。"
 
 #: ../../source/rpki/introduction.rst:78
 msgid "Internet number resource allocation hierarchy"
-msgstr ""
+msgstr "インターネット番号リソースの割り当て階層"
 
 #: ../../source/rpki/introduction.rst:81
 msgid "Mapping the Resource Allocation Hierarchy into the RPKI"
-msgstr ""
+msgstr "リソース割り当て階層のRPKIへのマッピング"
 
 #: ../../source/rpki/introduction.rst:83
 msgid ""
@@ -149,7 +173,14 @@ msgid ""
 "<https://www.nro.net/about/rirs/statistics/>`_ authoritative information "
 "on the allocations to NIRs and LIRs, and lastly, LIRs record to which End"
 " User organisation they assigned resources."
-msgstr ""
+msgstr "図3のように、IANAには５つのRIRに割り当てられている `IPv4 "
+"<https://www.iana.org/assignments/ipv4-address-space/ipv4-address-"
+"space.xhtml>`_、 `IPv6 <https://www.iana.org/assignments/ipv6-unicast-"
+"address-assignments/ipv6-unicast-address-assignments.xhtml>`_、 `AS番号 "
+"<https://www.iana.org/assignments/as-numbers/as-numbers.xhtml>`_ "
+"のリソースの正式な登録があります。それぞれのRIRはNIRおよびLIRに割り当てをする上での"
+"信頼できる情報を `登録 <https://www.nro.net/about/rirs/statistics/>`_ し、"
+"最後に、LIRはリソースを割り当てたエンドユーザー組織を記録します。"
 
 #: ../../source/rpki/introduction.rst:93
 msgid ""
@@ -159,11 +190,14 @@ msgid ""
 "resource allocation hierarchy, with the exception of the IANA level. "
 "Instead, the five RIRs each run a root CA with a trust anchor from which "
 "a chain of trust for the resources they each manage is derived."
-msgstr ""
+msgstr "RPKIでは、リソース証明書が、発行者によってIPアドレスやAS番号が割り当てられていることを"
+"証明します。その結果、RPKIの証明書の階層は、インターネット番号リソース割り当て階層に従いますが、"
+"IANAレベルは例外となります。代わりに、5つのRIRは、それぞれが管理するリソースの"
+"信頼性の連鎖の起点となるトラストアンカーとしてルートCAを管理します。"
 
 #: ../../source/rpki/introduction.rst:105
 msgid "The chain of trust in RPKI, starting at the five RIRs"
-msgstr ""
+msgstr "5つのRIRから始まるRPKIの信頼の連鎖"
 
 #: ../../source/rpki/introduction.rst:107
 msgid ""
@@ -178,11 +212,19 @@ msgid ""
 "brittle using multiple `overlapping trust anchors <https://www.nro.net"
 "/regional-internet-registries-are-preparing-to-deploy-all-resources-rpki-"
 "service/>`_."
-msgstr ""
+msgstr "IANAは単一のルート認証局（CA）を運用していません。もともと"
+"インターネットアーキテクチャ委員会（IAB）は、システム上でリソースが競合する可能性をはいじょするために、単一のルートCAで運用することを `推奨事項 "
+"<https://www.iab.org/documents/correspondence-reports-documents/docs2010/iab-statement-on-the-rpki/>`_ "
+"としていました。しかし、導入展開の運用実験により、RPKIシステムでは `重複するトラストアンカー "
+"<https://www.nro.net/regional-internet-registries-are-preparing-to-deploy-all-resources-rpki-"
+"service/>`_ "
+"を使用した場合でも不安定にならないとRIRが結論付けたことで、IABが "
+"`再考慮した結果 <https://www.iab.org/documents/correspondence-reports-documents/2018-2"
+"/iab-statement-on-the-rpki/>`_ 、このような運用となりました。"
 
 #: ../../source/rpki/introduction.rst:120
 msgid "X.509 PKI Considerations"
-msgstr ""
+msgstr "X.509 PKIの考慮事項"
 
 #: ../../source/rpki/introduction.rst:122
 msgid ""
@@ -192,7 +234,11 @@ msgid ""
 "context, a common misconception is that this is the *Routing* PKI. "
 "However, certificates in this PKI are called *resource* certificates and "
 "conform to the certificate profile described in :RFC:`6487`."
-msgstr ""
+msgstr "RPKIで使用されるデジタル証明書は、X.509に基づいており、:RFC:`5280` "
+"および、:RFC:`3779` で記述されているIPアドレスとAS番号の拡張にそって標準化されました。"
+"RPKIはルーティングセキュリティの文脈で使用されるので、*ルーティング* PKIとして"
+"よく誤解されますが、このPKIの証明書は、*リソース* 証明書と呼ばれ、:RFC:`6487` で記述されて"
+"いる証明書プロファイルに準拠しているものです。"
 
 #: ../../source/rpki/introduction.rst:129
 msgid ""
@@ -200,7 +246,9 @@ msgid ""
 "individual or, for example, a website. **In RPKI, certificates do not "
 "include identity information**, as their only purpose is to transfer the "
 "right to use Internet number resources."
-msgstr ""
+msgstr "X.509証明書は通常、個人またはWebサイトなどを認証するために使用されます。"
+"RPKIでは、インターネット番号リソースを使用する権利を譲渡するという目的のみに使用されるため、"
+"**証明書にはID情報は含まれていません。**"
 
 #: ../../source/rpki/introduction.rst:134
 msgid ""
@@ -212,12 +260,18 @@ msgid ""
 "established, openly governed, not-for-profit organisations. Each "
 "organisation that wishes to get an RPKI resource certificate already has "
 "a contractual relationship with one or more of the RIRs."
-msgstr ""
+msgstr "RPKIはID情報を持たないことに加えて、SSL/TLSなどX.509 PKIで一般的に使用されるものとは"
+"もう1つ重要な違いがあります。ブラウザまたはオペレーティングシステムのようにプリインストール"
+"されている膨大なルート証明書機関に依拠する代わりに、RPKIは、RIRによって管理されている5つの"
+"トラストアンカーにのみ依拠しています。RIRは、きちんと設立され、公的に運営されている"
+"非営利組織です。RPKIリソース証明書の取得を希望する各組織はすでに1つ以上のRIRと契約関係にあります。"
 
 #: ../../source/rpki/introduction.rst:143
 msgid ""
 "In conclusion, RPKI provides a mechanism to make strong, testable "
 "attestations about Internet number resources. In the next sections, we "
 "will look at how this can be used to make Internet routing more secure."
-msgstr ""
+msgstr "結論として、RPKIはインターネット番号リソースについて強力で検証可能な証拠を作成する"
+"メカニズムを提供します。次のセクションでは、RPKIを使用してインターネットルーティングを"
+"より安全にする方法を見ていきましょう。"
 
