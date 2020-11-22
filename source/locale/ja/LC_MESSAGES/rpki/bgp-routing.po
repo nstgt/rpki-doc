@@ -19,21 +19,25 @@ msgstr ""
 
 #: ../../source/rpki/bgp-routing.rst:7
 msgid "Internet Routing"
-msgstr ""
+msgstr "インターネットルーティング"
 
 #: ../../source/rpki/bgp-routing.rst:9
 msgid ""
 "To understand how RPKI is used to make Internet routing more secure, we "
 "must first look at how routing works, what the weaknesses are and which "
 "elements RPKI can currently help protect against."
-msgstr ""
+msgstr "RPKIを使用してインターネットルーティングをより安全にする方法を理解するには、"
+"まずルーティングがどのように機能するのか、どのような弱点があるのか、そしてRPKIが"
+"現在どのような事象に対して有効であるのかを見ておく必要があります。"
 
 #: ../../source/rpki/bgp-routing.rst:13
 msgid ""
 "The global routing system of the Internet consists of a number of "
 "functionally independent actors called autonomous systems (AS), which use"
 " the Border Gateway Protocol (BGP) to exchange routing information."
-msgstr ""
+msgstr "インターネットのグローバルルーティングシステムは、自律システム（Autonomous Systems: AS）と"
+"呼ばれる機能的に独立した多数の主体で構成されており、Border Gateway Protocol（BGP）"
+"を用いてルーティング情報を交換しています。"
 
 #: ../../source/rpki/bgp-routing.rst:17
 msgid ""
@@ -43,7 +47,12 @@ msgid ""
 "routing policy controlled by the entity and is identified by a globally "
 "unique 16 or 32-bit number. The AS number (ASN) is assigned by one of the"
 " five Regional Internet Registries (RIRs), just like IP address blocks."
-msgstr ""
+msgstr "自律システムとは、単一の主体や組織によって管理されるネットワークの集合体、"
+"または、あるネットワークに属するルーティング可能なIP prefixの集まりのことです。ASは、"
+"管理主体によって制御される共通のルーティングポリシーを利用しており、グローバルに一意な"
+"16または32ビットの番号で識別されます。AS番号はIPアドレスブロックと同様に5つの"
+"地域インターネットレジストリ（RIR）のうちの1つによって割り当てられます。"
+
 
 #: ../../source/rpki/bgp-routing.rst:24
 msgid ""
@@ -54,7 +63,11 @@ msgid ""
 "The system is very dynamic and flexible by design. Connectivity and "
 "routing topologies are subject to change, which easily propagate globally"
 " within a few minutes."
-msgstr ""
+msgstr "BGPはインターネット上において異なるAS間のピアリングやprefixの広報、および"
+"パケットのルーティングを管理します。BGPではAS番号を利用して各ネットワークを一意に"
+"識別します。BGPはインターネット上でAS間の道筋を示すルーティングプロトコルであると言えます。"
+"このシステムは設計上、非常に動的で柔軟性に富んでいます。接続性とルーティングトポロジは"
+"変更されやすく、その変更は簡単に数分以内でグローバルに伝播します。"
 
 #: ../../source/rpki/bgp-routing.rst:31
 msgid ""
@@ -64,11 +77,14 @@ msgid ""
 "authentication or authorisation embedded within BGP. In principle, an "
 "operator can define any ASN as the origin and announce any prefix, also "
 "one they are not the holder of."
-msgstr ""
+msgstr "BGPは基本的にネットワーク間の相互信頼に基づくプロトコルです。ネットワーク"
+"オペレーターが自分のAS内のルータを設定する際には、どのIP prefixを生成しピアに対して"
+"広報するかを指定します。BGPには認証や認可の仕組みはありません。原理的には、オペレーターは"
+"自分が保有していない任意のAS番号を生成元として定義したり、任意のprefixを広報したりすることができます。"
 
 #: ../../source/rpki/bgp-routing.rst:42
 msgid "BGP Best Path Selection"
-msgstr ""
+msgstr "BGPの最適パス選択"
 
 #: ../../source/rpki/bgp-routing.rst:44
 msgid ""
@@ -78,18 +94,23 @@ msgid ""
 "each prefix in the routing table, BGP continuously and dynamically makes "
 "decisions about the best path to reach a particular destination. After "
 "the best path is selected, the route is installed in the routing table."
-msgstr ""
+msgstr "BGPのルーティング情報には、各宛先までの完全な経路が含まれています。BGPはこの"
+"ルーティング情報を使用してネットワーク到達性情報のデータベースを維持し、他のネットワーク"
+"と交換します。BGPはルーティングテーブルの各prefixに対して、特定の宛先に到達するための"
+"最適なパスを継続的かつ動的に決定します。最適パスが決まると、その経路はルーティングテーブル"
+"にインストールされます。"
 
 #: ../../source/rpki/bgp-routing.rst:51
 msgid ""
 "Though there are many factors at play, two of them are the most important"
 " to keep in mind throughout the next sections: the preference for "
 "shortest path and most specific IP prefix."
-msgstr ""
+msgstr "最適パスの決定には様々な要素が関係しますが、その中でも特に重要なのは次のセクションで"
+"説明する最短パスとmost specific IP prefixの2つです。"
 
 #: ../../source/rpki/bgp-routing.rst:56
 msgid "Preference for Shortest Path"
-msgstr ""
+msgstr "最短パスの優位性"
 
 #: ../../source/rpki/bgp-routing.rst:58
 msgid ""
@@ -100,17 +121,22 @@ msgid ""
 " traffic to the destination that is topologically closest. This is an "
 "important feature of BGP, but when configuration errors occur, it can "
 "also be the cause of reachability problems."
-msgstr ""
+msgstr "ルーターがルーティング情報ベース（Routing Information Base: RIB）に"
+"保持している全ての経路のうち、BGPは経由するネットワークの数を最小限に抑えるため、"
+"宛先までのAS pathが最短となるパスを常に優先的に選択します。インターネット上の2つの異なる"
+"ネットワークから同一のprefixが広報された場合、BGPはトポロジー的に最も近い宛先に"
+"トラフィックを送ります。これはBGPの重要な機能である一方で、設定ミスが発生した場合には"
+"通信障害の原因にもなり得ます。"
 
 #: ../../source/rpki/bgp-routing.rst:70
 msgid ""
 "When the announcement of a prefix is an exact match, the shortest path "
 "wins"
-msgstr ""
+msgstr "同一のprefixを受信した場合にはAS pathが短い経路が選択される"
 
 #: ../../source/rpki/bgp-routing.rst:73
 msgid "Preference for Most Specific Prefix"
-msgstr ""
+msgstr "最もspecificなprefixの優位性"
 
 #: ../../source/rpki/bgp-routing.rst:75
 msgid ""
@@ -119,29 +145,33 @@ msgid ""
 "specific IP prefix available. This behaviour is important, but creates "
 "the possibility for almost any network to attract someone else's traffic "
 "by announcing an overlapping more specific."
-msgstr ""
+msgstr "フォワーディングテーブルを構成するにあたり、ルータはlocal preferenceや"
+"AS path長、または他の属性に関係なく、最もspecificなIP prefixを常に選択します。"
+"この動作は重要ですが、これによりほぼ全てのネットワークが、対象の経路と重複するより"
+"specificな経路を広報することで、他の誰かのトラフィックを吸い込む可能性があります。"
 
 #: ../../source/rpki/bgp-routing.rst:86
 msgid ""
 "Regardless of the path length, the announcement of a more specific prefix"
 " always wins"
-msgstr ""
+msgstr "AS path長に関係なくよりspecificなprefixが常に選択される"
 
 #: ../../source/rpki/bgp-routing.rst:89
 msgid ""
 "With this in mind, there are several problems that can arise as a result "
 "of this behaviour."
-msgstr ""
+msgstr "このことを念頭に置き、誤った行いの結果としていくつかの問題が発生することについて見ていきます。"
 
 #: ../../source/rpki/bgp-routing.rst:96
 msgid "Routing Errors"
-msgstr ""
+msgstr "ルーティングエラー"
 
 #: ../../source/rpki/bgp-routing.rst:98
 msgid ""
 "Routing errors on the Internet can be classified as route leaks or route "
 "hijacks. :RFC:`7908` provides a working definition of a BGP route leak:"
-msgstr ""
+msgstr "インターネット上のルーティングエラーは経路リークと経路ハイジャックに分類されます。"
+":RFC:`7908` はBGPの経路リークについて有用な定義を示しています："
 
 #: ../../source/rpki/bgp-routing.rst:102
 msgid ""
@@ -153,13 +183,19 @@ msgid ""
 "local redistribution/filtering policies distributed among the ASes "
 "involved.  Often, these intended policies are defined in terms of the "
 "pair-wise peering business relationship between autonomous systems."
-msgstr ""
+msgstr "経路リークとは、意図した範囲を超えて経路広報が伝播する事象のことです。"
+"これはつまり、ある自律システム（AS）が別のASに対してBGPで学習した経路を広報することが、"
+"その経路の受信者や送信者、および/またはAS path上に現れるASが意図するポリシーに"
+"違反した状態であること指します。経路の意図された伝搬範囲は、関連するAS間で適用される"
+"再配布やフィルタリングに関する一連のポリシーによって定義されます。多くの場合、"
+"これらのポリシーはAS間で決められたビジネス上のピアリング関係の観点から定義されます。"
 
 #: ../../source/rpki/bgp-routing.rst:112
 msgid ""
 "A route hijack, also called prefix hijack, or IP hijack, is the "
 "unauthorised origination of a route."
-msgstr ""
+msgstr "経路ハイジャック（prefixハイジャックやIPハイジャックとも呼ばれる）は、"
+"不正な経路生成のことを指します。"
 
 #: ../../source/rpki/bgp-routing.rst:115
 msgid ""
@@ -168,7 +204,10 @@ msgid ""
 "redirection of traffic through an unintended path. This may enable "
 "eavesdropping or traffic analysis and may, in some cases, result in a "
 "denial of service or black hole."
-msgstr ""
+msgstr "経路リークや経路ハイジャックには、偶発的なものと悪意のあるものがありますが、"
+"ほとんどの場合は **偶発的な設定ミス** から発生します。その結果、意図しない経路で"
+"トラフィックが送信されることがあります。これにより、盗聴やトラフィック分析が可能になり、"
+"場合によってはサービス拒否（DoS）やブラックホールになることもあります。"
 
 #: ../../source/rpki/bgp-routing.rst:120
 msgid ""
@@ -184,11 +223,20 @@ msgid ""
 "/suspicious-event-hijacks-amazon-traffic-for-2-hours-steals-"
 "cryptocurrency/>`_ for two hours in order to steal cryptocurrency, in "
 "2018."
-msgstr ""
+msgstr "ルーティングインシデントは毎日のように発生しています。数十年前には障害や"
+"トラフィックの不当な流れは偶発的に発生することが多かったのですが、近年ではより悪質な"
+"ものになっています。注目すべき事件としては1997年の `AS7007事件 "
+"<https://en.wikipedia.org/wiki/AS_7007_incident>`_ があります。他にも2008年にパキスタンが"
+"国内でYouTubeへのアクセスをブロックしようとした結果、 `YouTubeを完全にダウンさせた事件"
+" <https://www.ripe.net/publications/news/industry-developments/youtube-"
+"hijacking-a-ripe-ncc-ris-case-study>`_ や、2018年には暗号通貨を盗むために2時間にわたって"
+" `Amazon Route 53の約1,300のアドレスがハイジャックされる事件 <https://arstechnica.com/"
+"information-technology/2018/04/suspicious-event-hijacks-amazon-traffic-"
+"for-2-hours-steals-cryptocurrency/>`_ がありました。"
 
 #: ../../source/rpki/bgp-routing.rst:133
 msgid "Mitigation of Routing Errors"
-msgstr ""
+msgstr "ルーティングエラーの軽減"
 
 #: ../../source/rpki/bgp-routing.rst:135
 msgid ""
@@ -197,7 +245,10 @@ msgid ""
 "operators have to carefully gauge what the intended routing policy of "
 "their peers is. As a result, it is imperative that networks employ "
 "filters to only accept legitimate traffic and drop everything else."
-msgstr ""
+msgstr "BGPの弱点の1つは、プロトコル内の情報からルーティングエラーを容易に推測"
+"できないことです。このため、ネットワークオペレーターはピアの意図するルーティングポリシーを"
+"慎重に判断しなければなりません。その結果、ネットワークにフィルタリングを導入し、"
+"正当なトラフィックのみを受け入れ、それ以外はすべて破棄することが必須となります。"
 
 #: ../../source/rpki/bgp-routing.rst:141
 msgid ""
@@ -207,11 +258,15 @@ msgid ""
 "blocks. A more widely accepted method is the use of Internet Routing "
 "Registry (IRR) databases, where operators can publish their routing "
 "policy. Both methods allow other networks to set up filters accordingly."
-msgstr ""
+msgstr "これを実現するためにはいくつかの手法があります。特定のバックボーンやプライベートピアでは、"
+"IPアドレスブロックの広報や再広報を許可する前に、有効な承認書（Letter of Agency: LOA）を"
+"交わす必要があります。また、より広く用いられる手法としては、オペレーターがルーティングポリシーを"
+"公開できるインターネットルーティングレジストリ（IRR）データベースがあります。どちらの方法も、"
+"他のネットワークがそれに応じてフィルターを設定することを可能にします。"
 
 #: ../../source/rpki/bgp-routing.rst:153
 msgid "The Internet Routing Registry"
-msgstr ""
+msgstr "インターネットルーティングレジストリ"
 
 #: ../../source/rpki/bgp-routing.rst:155
 msgid ""
@@ -220,7 +275,11 @@ msgid ""
 "describe and query for routing intent. The IRR is used as a verification "
 "mechanism of route origination and is widely, though not universally, "
 "deployed to prevent accidental or intentional routing disturbances."
-msgstr ""
+msgstr "インターネットルーティングレジストリ（IRR）は、ネットワークオペレーターが"
+"ルーティングの意図を記述し、クエリすることを可能にする `分散型のデータベース <http://"
+"www.irr.net/docs/list.html>`_ です。IRRは経路の広報元を検証するメカニズムとして"
+"使用されており、普遍的ではないものの、偶発的または意図的なルーティングに対する妨害行為を"
+"防ぐために広く展開されています。"
 
 #: ../../source/rpki/bgp-routing.rst:161
 msgid ""
@@ -231,7 +290,11 @@ msgid ""
 "enthusiasm and has seen quite some traction, the Internet was rapidly "
 "growing at the time. This meant that the primary focus was on data "
 "availability rather than data trustworthiness."
-msgstr ""
+msgstr "IRRで使用される表記法は、1998年に :RFC:`2280` で定義されたルーティングポリシー"
+"仕様言語（Routing Policy Specification Language: RPSL）です。RPSLは非常に表現力が高く、"
+"ルーティングポリシーをとても詳細に記述することができます。IRRの利用は初期にはかなりの熱狂的な"
+"支持を集めていましたが、当時はインターネットが急速に成長している段階でした。そのためデータの"
+"信頼性よりもデータの可用性に主眼が置かれていました。"
 
 #: ../../source/rpki/bgp-routing.rst:169
 msgid ""
@@ -239,7 +302,10 @@ msgid ""
 " how incoming and outgoing traffic was treated by the network, but "
 "nowadays the most prevalent usage is to publish and query for *route* "
 "objects, describing from which ASN a prefix is intended to be originated:"
-msgstr ""
+msgstr "その後、IRRを用いて「ネットワークが送受信トラフィックをどのように扱うか」を"
+"広く文書化することが良い取り組みだと考えられていましたが、現在では"
+"「あるprefixがどのASから広報されることを意図しているか」を記述したrouteオブジェクトを公開したり、"
+"クエリすることが最も一般的な使用法となっています。"
 
 #: ../../source/rpki/bgp-routing.rst:185
 msgid ""
@@ -250,7 +316,11 @@ msgid ""
 "Over time, this has created an expansive repository of obsolete data of "
 "uncertain validity, spread across dozens of routing registries around the"
 " world."
-msgstr ""
+msgstr "先に説明したように、地域インターネットレジストリだけがインターネット番号リソースの"
+"正当な所有者に関する権威ある情報を持っています。つまり、RIRのIRRデータベースのエントリーは"
+"認証されている一方で、他のどのルーティングレジストリにも正当性が保証された情報は存在しないという"
+"ことになります。この事実が時間の経過とともに、世界中の数十のルーティングレジストリにわたり"
+"有効性が不確かな廃れたデータから成る広大なリポジトリを生み出してきたのです。"
 
 #: ../../source/rpki/bgp-routing.rst:192
 msgid ""
@@ -260,7 +330,10 @@ msgid ""
 "sufficiently accurate and up to date for filtering purposes, nor "
 "sufficiently comprehensive or precise for being the golden master in "
 "router configuration."
-msgstr ""
+msgstr "加えて、RPSLとそれをサポートするツールは、そのポリシーを矛盾なくルーターの設定言語に"
+"変換するには複雑すぎることが分かってきました。結果として、公開されているほとんどのRPSLのデータは、"
+"フィルタリングを目的とした場合には正確性や更新度合いが不十分であり、また、ルーター設定のゴールデンマスター"
+"としては十分に包括性でなく精密さに欠けるものとなっています。"
 
 #: ../../source/rpki/bgp-routing.rst:198
 msgid ""
@@ -269,7 +342,9 @@ msgid ""
 "water tight. The result is that out of all the information on routing "
 "intent that is published, it is difficult to determine what is "
 "legitimate, authentic data and what isn’t."
-msgstr ""
+msgstr "結論から言うとIRRの主な弱点は、グローバルに展開されたシステムではないこと、また、"
+"隙のないシステムにするための認証モデルを欠いていることです。結果として、IRRで公開されている"
+"ルーティングの意図に関する全ての情報のうち、何が正しいデータで何がそうでないのかを判断することが困難になっています。"
 
 #: ../../source/rpki/bgp-routing.rst:204
 msgid ""
@@ -277,5 +352,6 @@ msgid ""
 "authoritative, cryptographically verifiable statement can be made by any "
 "legitimate IP resource holder in the world. In the next sections we will "
 "look at how this is achieved."
-msgstr ""
+msgstr "RPKIは、世界中の正当なIPリソースの所有者が、暗号的に検証可能な権威ある宣言を"
+"行えるようにすることでこれらの問題を解決します。次の節ではこれがどのようにして実現されるかを見ていきます。"
 
